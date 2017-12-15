@@ -41,9 +41,10 @@ plan:
 
 
 Dec 14:
-- basic bf loot
+- crate animation
 
 Dec 15
+- basic bf loot
 - inventory
 
 Dec 16
