@@ -14,11 +14,17 @@ mechanics:
 - just buy buy buy
 
 Planned Expansion Packs:
-- Frontal Battle 2
-- Lootawatch
-- Duty of Honour: Supplying the Drops
-- SkinCrate 
-
+Frontal Battle 2:
+- "CA$H GRAB" Campaign Crate
+- "Daily Slot Machine" Crate
+- "Not Premium" Crate
+-
+Lootawatch:
+- Not Gambling Crate
+Duty of Honour: Supplying the Drops:
+- 
+SkinCrate:
+- 
 
 items:
 net neutrality
