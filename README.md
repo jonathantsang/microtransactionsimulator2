@@ -67,8 +67,12 @@ Dec 14:
 - some basic UI
 
 Dec 15
-- basic bf loot
-- inventory
+- camera movement
+- basic ui
 
 Dec 16
+- inventory
+
+Dec 21:
+- basic bf loot
 - saves
