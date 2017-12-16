@@ -9,30 +9,47 @@ simple:
 - speedrun?
 
 mechanics:
-- difficulty slider, ae to ninfriendo
-- wait for money version
-- just buy buy buy
+- open free or premium crates
+- slot part, scog lotto
 
 Planned Expansion Packs:
 Frontal Battle 2:
 - "CA$H GRAB" Campaign Crate
 - "Daily Slot Machine" Crate
 - "Not Premium" Crate
--
+- "Premium" Crate
+
 Lootawatch:
 - Not Gambling Crate
+
 Duty of Honour: Supplying the Drops:
 - 
+Player 1 Day Ground:
+-
+
 SkinCrate:
 - 
 
 items:
+
+polite items:
 net neutrality
 the 2016 election
+trump
+trump hair
+
+animals
 chupacabra
 el pollo diablo
 
+bitcoin
+litcoin
+pitcoin
+gitcoin
+
+
 shop:
+- number of crates open at a time
 
 recipes:
 merge stuff
@@ -41,13 +58,13 @@ merge stuff
 taglines:
 - quality game
 
-
 plan:
-- battlefront
+- bf
 
 
 Dec 14:
 - crate animation
+- some basic UI
 
 Dec 15
 - basic bf loot
