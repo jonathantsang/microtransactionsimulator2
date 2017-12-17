@@ -100,9 +100,12 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-'Assets/CameraMovement.cs'
+'Assets/GameController.cs'
 'Assets/scripts/BF_CrateButtonClick.cs'
+'Assets/scripts/CameraMovement.cs'
 'Assets/scripts/crateUIController.cs'
+'Assets/scripts/MenuButtons/InventoryButton.cs'
+'Assets/scripts/MenuButtons/WorldsButton.cs'
 'Assets/scripts/panelopen.cs'
 'Assets/scripts/UIDropdown.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'

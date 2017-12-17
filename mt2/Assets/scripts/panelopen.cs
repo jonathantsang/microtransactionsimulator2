@@ -15,9 +15,11 @@ public class panelopen : MonoBehaviour {
 	}
 
 	void Update(){
-		if (Input.GetKeyDown ("o")) {
-			Debug.Log ("opening");
-			animator.SetTrigger ("opening");
-		}
+		
+	}
+
+	public void OpenAnimation(){
+		Debug.Log ("opening");
+		animator.SetTrigger ("opening");
 	}
 }

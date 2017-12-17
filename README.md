@@ -1,5 +1,6 @@
-# Microtransaction Simulator 2: GOTY Edition
-# Triple A Game Simulator
+# Microtransaction Simulator Remastered Edition: GOTY Edition
+
+- preorder now to get a buggy unfinished dlc game
 
 simple:
 - collect all
@@ -30,23 +31,6 @@ Player 1 Day Ground:
 SkinCrate:
 - 
 
-items:
-
-polite items:
-net neutrality
-the 2016 election
-trump
-trump hair
-
-animals
-chupacabra
-el pollo diablo
-
-bitcoin
-litcoin
-pitcoin
-gitcoin
-
 
 shop:
 - number of crates open at a time
@@ -71,6 +55,8 @@ Dec 15
 - basic ui
 
 Dec 16
+- back button
+- opening stuff
 - inventory
 
 Dec 21:
