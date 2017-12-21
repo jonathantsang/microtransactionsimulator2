@@ -2,6 +2,12 @@
 
 - preorder now to get a buggy unfinished dlc game
 
+why:
+- 6k users or so, possibly
+- valid
+- proof of concept
+- success
+
 simple:
 - collect all
 - time to get currency automatically
@@ -31,6 +37,12 @@ Player 1 Day Ground:
 SkinCrate:
 - 
 
+inventory:
+- shows things in inventory
+
+merge:
+- combine
+
 
 shop:
 - number of crates open at a time
@@ -45,6 +57,13 @@ taglines:
 plan:
 - bf
 
+to-do:
+- make total ui for bf
+- make other 3 expansion packs
+- save data
+- obfuscate data
+- combos (combining or open in same crate)
+
 
 Dec 14:
 - crate animation
@@ -56,9 +75,16 @@ Dec 15
 
 Dec 16
 - back button
-- opening stuff
+
+Dec 20:
 - inventory
+- basic opening
 
 Dec 21:
+- full bf ui
+- opening stuff
+
+Dec 22:
+- inventory
 - basic bf loot
 - saves

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - panel
   - crateUI
+  - backButton
+  - StateController
+  - InventoryController
   layers:
   - Default
   - TransparentFX
