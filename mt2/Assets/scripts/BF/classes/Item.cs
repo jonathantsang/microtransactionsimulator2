@@ -8,6 +8,7 @@ public class Item {
 	public Item(int i, string s, string d){
 		id = i;
 		name = s;
+		description = d;
 	}
 
 	int id;
