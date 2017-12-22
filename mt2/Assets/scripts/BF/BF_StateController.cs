@@ -14,7 +14,7 @@ public class BF_StateController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Start at crate selection
-		int state = 0;
+		state = 0;
 		crateUI = GameObject.FindGameObjectWithTag ("crateUI");
 		backButton = GameObject.FindGameObjectWithTag ("backButton");
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BF_RNGController : MonoBehaviour {
 
 	// indicies of rolling for BF
-	int low = 0;
+	int low = 1;
 	int high = 10;
 
 	public int getRandom(){

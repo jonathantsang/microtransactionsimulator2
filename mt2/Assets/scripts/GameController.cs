@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Random.InitState ((int)System.DateTime.Now.Ticks);
+
 		// Singleton Behaviour
 		if (instance == null)
 			instance = this;

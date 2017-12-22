@@ -62,8 +62,11 @@ to-do:
 - make other 3 expansion packs
 - save data
 - obfuscate data
+- shop upgrades
 - combos (combining or open in same crate)
-
+- steamworks achievements
+- trading cards
+- steam store graphics
 
 Dec 14:
 - crate animation

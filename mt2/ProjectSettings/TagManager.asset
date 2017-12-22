@@ -9,6 +9,10 @@ TagManager:
   - backButton
   - StateController
   - InventoryController
+  - CardPlaces
+  - RNGController
+  - CardHolder
+  - ItemDirectoryController
   layers:
   - Default
   - TransparentFX

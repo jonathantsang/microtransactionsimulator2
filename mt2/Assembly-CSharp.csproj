@@ -51,9 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BF_Card.cs" />
+     <Compile Include="Assets\ItemDirectoryController.cs" />
      <Compile Include="Assets\scripts\BF\BF_backButton.cs" />
      <Compile Include="Assets\scripts\BF\BF_CameraMovement.cs" />
+     <Compile Include="Assets\scripts\BF\BF_Card.cs" />
      <Compile Include="Assets\scripts\BF\BF_CrateButtonClick.cs" />
      <Compile Include="Assets\scripts\BF\BF_panelopen.cs" />
      <Compile Include="Assets\scripts\BF\BF_RNGController.cs" />

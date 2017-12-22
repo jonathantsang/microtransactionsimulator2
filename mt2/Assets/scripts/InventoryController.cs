@@ -10,6 +10,8 @@ public class InventoryController : MonoBehaviour {
 	// each item is denoted as an int for id
 	private List<int> inventory;
 
+	private int OpenCount = 3; // How many to open at once
+
 	// Use this for initialization
 	void Start () {
 		// Singleton Behaviour
@@ -29,5 +31,9 @@ public class InventoryController : MonoBehaviour {
 
 	public void addToInventory(int i){
 		inventory.Add (i);
+	}
+
+	public int HowManyToOpen(){
+		return OpenCount;
 	}
 }

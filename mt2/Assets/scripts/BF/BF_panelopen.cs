@@ -11,7 +11,7 @@ public class BF_panelopen : MonoBehaviour {
 	}
 
 	public void open(){
-		Debug.Log("PrintEvent: " + "open" + " called at: " + Time.time);
+		//Debug.Log("PrintEvent: " + "open" + " called at: " + Time.time);
 	}
 
 	void Update(){
@@ -19,7 +19,6 @@ public class BF_panelopen : MonoBehaviour {
 	}
 
 	public void OpenAnimation(){
-		Debug.Log ("opening");
 		animator.SetTrigger ("opening");
 	}
 }
