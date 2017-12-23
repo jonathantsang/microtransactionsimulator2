@@ -13,6 +13,10 @@ TagManager:
   - RNGController
   - CardHolder
   - ItemDirectoryController
+  - Content
+  - RightPanel
+  - InventoryPageSelectedController
+  - InventoryPageController
   layers:
   - Default
   - TransparentFX

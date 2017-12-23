@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ItemDirectoryController.cs" />
      <Compile Include="Assets\scripts\BF\BF_backButton.cs" />
      <Compile Include="Assets\scripts\BF\BF_CameraMovement.cs" />
      <Compile Include="Assets\scripts\BF\BF_Card.cs" />
@@ -63,6 +62,10 @@
      <Compile Include="Assets\scripts\crateUIController.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\InventoryController.cs" />
+     <Compile Include="Assets\scripts\InventoryPage\InventoryPageClick.cs" />
+     <Compile Include="Assets\scripts\InventoryPage\InventoryPageController.cs" />
+     <Compile Include="Assets\scripts\InventoryPage\InventoryPageSelectedController.cs" />
+     <Compile Include="Assets\scripts\ItemDirectoryController.cs" />
      <Compile Include="Assets\scripts\MenuButtons\InventoryButton.cs" />
      <Compile Include="Assets\scripts\MenuButtons\WorldsButton.cs" />
      <Compile Include="Assets\scripts\UIDropdown.cs" />

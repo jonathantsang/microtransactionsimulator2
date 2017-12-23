@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   one: {fileID: 21300000, guid: 26ab922475b4d4087bf66fa94023bc32, type: 3}
-  two: {fileID: 0}
-  three: {fileID: 0}
-  four: {fileID: 0}
-  five: {fileID: 0}
-  six: {fileID: 0}
-  seven: {fileID: 0}
-  eight: {fileID: 0}
-  nine: {fileID: 0}
-  ten: {fileID: 0}
+  two: {fileID: 21300000, guid: b933e1800514b4e38a4ad01f1b9f1ee9, type: 3}
+  three: {fileID: 21300000, guid: a257a2cb8121c401b8ea1eca5ea98baa, type: 3}
+  four: {fileID: 21300000, guid: 9286451ac91c8431fb5c1fe9f6aa70be, type: 3}
+  five: {fileID: 21300000, guid: 26a1aa74894c747b5a412f89b959862c, type: 3}
+  six: {fileID: 21300000, guid: 24397ff42280f49b18edd8e43e6c5382, type: 3}
+  seven: {fileID: 21300000, guid: 615ae780c3a274262a4cf16058abbac1, type: 3}
+  eight: {fileID: 21300000, guid: e5e641125bc9c4f16ad46f42336b372b, type: 3}
+  nine: {fileID: 21300000, guid: 00a9ee978130a4d8093151d724619533, type: 3}
+  ten: {fileID: 21300000, guid: fb4dcaa3edadf4ccaaac2e20db90a547, type: 3}

@@ -9,6 +9,7 @@ public class InventoryController : MonoBehaviour {
 
 	// each item is denoted as an int for id
 	private List<int> inventory;
+	private Dictionary<int, int> collected; // Used for inventory page that lets you know what you have seen
 
 	private int OpenCount = 3; // How many to open at once
 
@@ -21,7 +22,9 @@ public class InventoryController : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 
-		inventory = new List<int> () { 2, 3, 4, 9 };
+		inventory = new List<int> () { 2, 3, 4, 9 }; // TODO fix testing
+		collected = new Dictionary<int, int> {{2,1}, {3, 1}, {4,1}, {9,1}};
+
 	}
 	
 	// Update is called once per frame
@@ -31,6 +34,7 @@ public class InventoryController : MonoBehaviour {
 
 	public void addToInventory(int i){
 		inventory.Add (i);
+		collected [i] = 1;
 	}
 
 	public int HowManyToOpen(){
@@ -39,5 +43,13 @@ public class InventoryController : MonoBehaviour {
 
 	public List<int> getInventory(){
 		return inventory;
+	}
+
+	public Dictionary<int, int> getCollected(){
+		return collected;
+	}
+
+	public bool checkCollected(int i){
+		return collected.ContainsKey(i) && collected[i] >= 1;
 	}
 }
