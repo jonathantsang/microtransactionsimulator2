@@ -17,6 +17,7 @@ TagManager:
   - RightPanel
   - InventoryPageSelectedController
   - InventoryPageController
+  - Viewport
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InventoryButton : MonoBehaviour {
 
@@ -19,6 +20,6 @@ public class InventoryButton : MonoBehaviour {
 	}
 
 	void openInventory(){
-		
+		SceneManager.LoadScene ("Inventory");
 	}
 }
