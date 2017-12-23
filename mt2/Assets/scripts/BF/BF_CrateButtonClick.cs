@@ -65,6 +65,11 @@ public class BF_CrateButtonClick : MonoBehaviour {
 			Transform place = CardPlaces.transform.GetChild (i).transform;
 			Vector3 position = place.position;
 			GameObject CardCreated = Instantiate (Card, position, Quaternion.identity);
+
+			// Access BF_Card for the card and set the item to the script
+			BF_Card BFC = CardCreated.transform.GetChild(0).GetComponent<BF_Card>();
+			BFC.setItem (item);
+
 			// Edit item image
 			SpriteRenderer spriterenderer = CardCreated.transform.GetChild(1).transform.GetChild(2).GetComponent<SpriteRenderer>();
 			spriterenderer.sprite = spritetouse;
@@ -74,7 +79,6 @@ public class BF_CrateButtonClick : MonoBehaviour {
 			// edit the description
 			TextMesh descriptionmesh = CardCreated.transform.GetChild(1).transform.GetChild(4).GetComponent<TextMesh>();
 			descriptionmesh.text = description;
-			// change the sprite
 
 			// parent is Cards holder
 			CardCreated.transform.parent = CardHolder.transform;

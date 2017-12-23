@@ -21,7 +21,7 @@ public class InventoryController : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 
-		inventory = new List<int> ();
+		inventory = new List<int> () { 2, 3, 4, 9 };
 	}
 	
 	// Update is called once per frame
@@ -35,5 +35,9 @@ public class InventoryController : MonoBehaviour {
 
 	public int HowManyToOpen(){
 		return OpenCount;
+	}
+
+	public List<int> getInventory(){
+		return inventory;
 	}
 }

@@ -68,6 +68,9 @@ to-do:
 - trading cards
 - steam store graphics
 
+bugs:
+- crate button pressed multiple times goes too fast
+
 Dec 14:
 - crate animation
 - some basic UI
@@ -88,6 +91,14 @@ Dec 21:
 - opening stuff
 
 Dec 22:
-- inventory
+
+Dec 23:
+- inventory screen viewing
+- art up to 30
+
+Dec 24:
+- merging decided and implemented
+
+Dec 24:
 - basic bf loot
 - saves

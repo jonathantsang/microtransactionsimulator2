@@ -8,9 +8,15 @@ public class BF_Card : MonoBehaviour {
 	Animator animator;
 	GameObject Front;
 	GameObject Opened;
+	Item CardItem;
+
+	private InventoryController IC;
 
 	// Use this for initialization
 	void Start () {
+		// links first
+		IC = GameObject.FindGameObjectWithTag("InventoryController").GetComponent<InventoryController>();
+
 		Front = gameObject;
 		Opened = transform.parent.transform.GetChild (1).gameObject; // Opened is sibling of card
 		animation = GetComponent<Animation> ();
@@ -40,6 +46,8 @@ public class BF_Card : MonoBehaviour {
 		animator.SetTrigger ("Flip");
 		// wait for rotation before turning front off
 		StartCoroutine(Wait(20)); // 20 * 0.1 is 2 seconds 
+		// add item to the inventory
+		IC.addToInventory(CardItem.getID());
 	}
 
 	IEnumerator Wait(float time){
@@ -49,6 +57,10 @@ public class BF_Card : MonoBehaviour {
 			counter += 1;
 		}
 		DisableFront ();
+	}
+
+	public void setItem(Item item){
+		CardItem = item;
 	}
 		
 }
