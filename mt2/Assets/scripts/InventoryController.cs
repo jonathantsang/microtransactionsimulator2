@@ -11,6 +11,8 @@ public class InventoryController : MonoBehaviour {
 	private List<int> inventory;
 	private Dictionary<int, int> collected; // Used for inventory page that lets you know what you have seen
 
+	// data for storage
+	private int Currency = 300;
 	private int OpenCount = 3; // How many to open at once
 
 	// Use this for initialization
@@ -51,5 +53,9 @@ public class InventoryController : MonoBehaviour {
 
 	public bool checkCollected(int i){
 		return collected.ContainsKey(i) && collected[i] >= 1;
+	}
+
+	public int getCurrency(){
+		return Currency;
 	}
 }

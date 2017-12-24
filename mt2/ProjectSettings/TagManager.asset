@@ -18,6 +18,8 @@ TagManager:
   - InventoryPageSelectedController
   - InventoryPageController
   - ShopController
+  - Upgrades
+  - ShopUnlocked
   layers:
   - Default
   - TransparentFX

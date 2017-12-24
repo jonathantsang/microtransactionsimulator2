@@ -59,6 +59,7 @@
      <Compile Include="Assets\scripts\BF\BF_RNGController.cs" />
      <Compile Include="Assets\scripts\BF\BF_StateController.cs" />
      <Compile Include="Assets\scripts\BF\classes\Item.cs" />
+     <Compile Include="Assets\scripts\BFButton.cs" />
      <Compile Include="Assets\scripts\crateUIController.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\InventoryController.cs" />
@@ -68,8 +69,12 @@
      <Compile Include="Assets\scripts\ItemDirectoryController.cs" />
      <Compile Include="Assets\scripts\MenuButtons\InventoryButton.cs" />
      <Compile Include="Assets\scripts\MenuButtons\WorldsButton.cs" />
+     <Compile Include="Assets\scripts\ShopPage\ShopButtonClick.cs" />
+     <Compile Include="Assets\scripts\ShopPage\ShopController.cs" />
      <Compile Include="Assets\scripts\UIDropdown.cs" />
-     <Compile Include="Assets\ShopController.cs" />
+     <Compile Include="Assets\ShopButton.cs" />
+     <Compile Include="Assets\ShopUnlocked.cs" />
+     <Compile Include="Assets\StartButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

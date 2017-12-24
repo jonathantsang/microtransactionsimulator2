@@ -29,9 +29,6 @@ public class InventoryPageController : MonoBehaviour {
 	}
 
 	void LoadInventory(){
-		// Instantiate Inventory
-
-
 		// For each row in the inventory, check if the InventoryController has it unlocked
 		for(int i = 0; i < Inventory.transform.childCount; i++){
 			// 5 elements per row
@@ -40,7 +37,6 @@ public class InventoryPageController : MonoBehaviour {
 				int id = i * 5 + j; // Gets the index based on the positioning
 
 				// Load the ID into the InventoryPageClick
-				Debug.Log(id);
 				Inventory.transform.GetChild(i).transform.GetChild(j).GetComponent<InventoryPageClick>().setID(id);
 				ItemTiles.Add (Inventory.transform.GetChild (i).transform.GetChild (j).gameObject);
 

@@ -40,7 +40,6 @@ public class BF_CrateButtonClick : MonoBehaviour {
 	}
 
 	void OpenAnimation(){
-		Debug.Log ("open animation");
 		// open panels
 		GameObject[] panels = GameObject.FindGameObjectsWithTag("panel");
 		for (int i = 0; i < panels.Length; i++) {
@@ -52,10 +51,8 @@ public class BF_CrateButtonClick : MonoBehaviour {
 		// materialize the crates on the screen ui
 		int OpenCount = IC.HowManyToOpen();
 		for (int i = 0; i < OpenCount; i++) {
-			Debug.Log ("new card");
 			// call random
 			int id = RNGcontroller.getRandom();
-			Debug.Log (id);
 			// look up id in directory of items, make the item
 			Item item = IDC.getItem(id);
 			string name = item.getName();

@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222965418326915776}
   - component: {fileID: 114989664319918430}
   - component: {fileID: 114761271342445002}
+  - component: {fileID: 114649704314294820}
   m_Layer: 0
   m_Name: Worlds
   m_TagString: Untagged
@@ -174,6 +175,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Inventory
+--- !u!114 &114649704314294820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215536877353170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7facfa7b0ce914f0b989b0b28095bb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114755486776428920
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -50,8 +50,14 @@ merge stuff
 taglines:
 - quality game
 
-plan:
+figure out:
+- currency system (coins, per crate, selling)
+- recipes
+
+- scenes:
 - bf
+- shop
+- worlds
 
 to-do:
 - make total ui for bf
@@ -66,9 +72,13 @@ to-do:
 - steam store graphics
 
 shop:
-- number of crates open at a time
-- SCOG Lotto
-- 
+- number of crates open at a time 1-3
+- SCOG Lotto 4
+- luck++ 5
+- retro 6
+- Odyssey 7 
+- california love 8
+- endgame 9
 
 bugs:
 - crate button pressed multiple times goes too fast
@@ -99,9 +109,10 @@ Dec 23:
 - art up to 30
 
 Dec 24:
-- shop
-- open all button
+- shop, figure out upgrades
 - basic functionality up to 30
+- open all button
+- destroy card after it has been opened
 - figure out the merging concept
 
 - merging decided and implemented

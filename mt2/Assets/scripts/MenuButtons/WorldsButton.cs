@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WorldsButton : MonoBehaviour {
 
@@ -19,6 +20,6 @@ public class WorldsButton : MonoBehaviour {
 	}
 
 	void openWorldMap(){
-		
+		SceneManager.LoadScene ("Worlds");
 	}
 }
