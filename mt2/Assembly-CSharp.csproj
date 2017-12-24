@@ -69,6 +69,7 @@
      <Compile Include="Assets\scripts\MenuButtons\InventoryButton.cs" />
      <Compile Include="Assets\scripts\MenuButtons\WorldsButton.cs" />
      <Compile Include="Assets\scripts\UIDropdown.cs" />
+     <Compile Include="Assets\ShopController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

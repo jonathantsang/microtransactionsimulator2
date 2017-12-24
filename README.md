@@ -43,10 +43,6 @@ inventory:
 merge:
 - combine
 
-
-shop:
-- number of crates open at a time
-
 recipes:
 merge stuff
 
@@ -59,6 +55,7 @@ plan:
 
 to-do:
 - make total ui for bf
+- scog lotto
 - make other 3 expansion packs
 - save data
 - obfuscate data
@@ -67,6 +64,11 @@ to-do:
 - steamworks achievements
 - trading cards
 - steam store graphics
+
+shop:
+- number of crates open at a time
+- SCOG Lotto
+- 
 
 bugs:
 - crate button pressed multiple times goes too fast
@@ -97,8 +99,11 @@ Dec 23:
 - art up to 30
 
 Dec 24:
-- merging decided and implemented
+- shop
+- open all button
+- basic functionality up to 30
+- figure out the merging concept
 
-Dec 24:
+- merging decided and implemented
 - basic bf loot
 - saves
