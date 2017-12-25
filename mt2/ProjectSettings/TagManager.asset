@@ -21,6 +21,7 @@ TagManager:
   - Upgrades
   - ShopUnlocked
   - OpenAllButton
+  - Lootbox
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\OpenAllButton.cs" />
      <Compile Include="Assets\scripts\BF\BF_backButton.cs" />
      <Compile Include="Assets\scripts\BF\BF_CameraMovement.cs" />
      <Compile Include="Assets\scripts\BF\BF_Card.cs" />
@@ -68,13 +67,16 @@
      <Compile Include="Assets\scripts\InventoryPage\InventoryPageController.cs" />
      <Compile Include="Assets\scripts\InventoryPage\InventoryPageSelectedController.cs" />
      <Compile Include="Assets\scripts\ItemDirectoryController.cs" />
+     <Compile Include="Assets\scripts\LW_OpenAnimation.cs" />
+     <Compile Include="Assets\scripts\LW_SpinningCard.cs" />
      <Compile Include="Assets\scripts\MenuButtons\InventoryButton.cs" />
      <Compile Include="Assets\scripts\MenuButtons\WorldsButton.cs" />
+     <Compile Include="Assets\scripts\OpenAllButton.cs" />
+     <Compile Include="Assets\scripts\ShopButton.cs" />
      <Compile Include="Assets\scripts\ShopPage\ShopButtonClick.cs" />
      <Compile Include="Assets\scripts\ShopPage\ShopController.cs" />
-     <Compile Include="Assets\ShopButton.cs" />
-     <Compile Include="Assets\ShopUnlocked.cs" />
-     <Compile Include="Assets\StartButton.cs" />
+     <Compile Include="Assets\scripts\ShopUnlocked.cs" />
+     <Compile Include="Assets\scripts\StartButton.cs" />
      <None Include="Assets\plugins\Steamworks.NET\Plugins\Steamworks.NET\redist\steam_appid.txt" />
      <None Include="Assets\plugins\Steamworks.NET\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">

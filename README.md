@@ -116,6 +116,11 @@ Dec 24:
 - figure out the merging concept
 
 Dec 25:
+- figure out if 1-25 in world 1, 26-50 in world2, etc.
+- lootawatch ui
+: - open crate, fly up, move camera to back to see contents
+- worlds art
+- clean up camel case methods (all caps except get/set)
 - recipes
 - upgrades do stuff
 
