@@ -40,12 +40,12 @@ public class BF_Card : MonoBehaviour {
 		Opened.SetActive (false);
 	}
 
-	void openCard(){
+	// public so open all can access it
+	public void openCard(){
 		// Set rotation animation
-		Debug.Log("flip card");
 		animator.SetTrigger ("Flip");
 		// wait for rotation before turning front off
-		StartCoroutine(Wait(20)); // 20 * 0.1 is 2 seconds 
+		StartCoroutine(Wait(15)); // 20 * 0.1 is 2 seconds 
 		// add item to the inventory
 		IC.addToInventory(CardItem.getID());
 	}

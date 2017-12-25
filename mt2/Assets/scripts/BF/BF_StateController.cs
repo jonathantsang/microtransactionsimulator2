@@ -10,6 +10,7 @@ public class BF_StateController : MonoBehaviour {
 	// Changing elements
 	GameObject crateUI;
 	GameObject backButton;
+	GameObject OpenAllButton;
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +18,15 @@ public class BF_StateController : MonoBehaviour {
 		state = 0;
 		crateUI = GameObject.FindGameObjectWithTag ("crateUI");
 		backButton = GameObject.FindGameObjectWithTag ("backButton");
+		OpenAllButton = GameObject.FindGameObjectWithTag ("OpenAllButton");
 
 		// initial state
 		// turn on crateUI
 		crateUI.SetActive(true);
 		// turn off back button
 		backButton.SetActive(false);
+		// turn off open all button
+		OpenAllButton.SetActive(false);
 	}
 
 	public void changeState(int i){
@@ -31,11 +35,15 @@ public class BF_StateController : MonoBehaviour {
 			crateUI.SetActive(true);
 			// turn off back button
 			backButton.SetActive(false);
+			// turn off open all button
+			OpenAllButton.SetActive(false);
 		} else if (i == 1) {
 			// turn off crateUI
 			crateUI.SetActive(false);
 			// turn on back button
 			backButton.SetActive(true);
+			// turn on open all button
+			OpenAllButton.SetActive(true);
 		}
 	}
 	

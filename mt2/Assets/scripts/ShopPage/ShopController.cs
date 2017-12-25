@@ -20,11 +20,11 @@ public class ShopController : MonoBehaviour {
 		GameObject Upgrades = GameObject.FindGameObjectWithTag ("Upgrades").gameObject;
 		// prices
 		List<int> prices = new List<int> {99, 499, 999, 299, 399, 109, 394, 808, 2048};
-
 		// DestroyAlreadyUpgraded
 		for (int i = 0; i < Upgrades.transform.childCount; i++) {
 			// set index and price
-			Upgrades.transform.GetChild(0).GetComponent<ShopButtonClick> ().setIndexAndPrice (i, prices[i]);
+			UpgradeList.Add (Upgrades.transform.GetChild (i).gameObject);
+			Upgrades.transform.GetChild(i).transform.GetChild(0).GetComponent<ShopButtonClick> ().setIndexAndPrice (i, prices[i]);
 			if (SU.CheckUpgrades(i) == 1) {
 				Debug.Log ("already bought " + i);
 				Destroy (UpgradeList[i]);

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class BF_backButton : MonoBehaviour {
 
 	private BF_CameraMovement camera;
-	private BF_StateController stateController;
+	private GameObject Cards;
 
 	void Start()
 	{
+		Cards = GameObject.FindGameObjectWithTag ("CardHolder").gameObject;
 		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<BF_CameraMovement> ();
-		stateController = GameObject.FindGameObjectWithTag ("StateController").GetComponent<BF_StateController> ();
 			
 		// Button
 		Button btn = GetComponent<Button>();
@@ -25,6 +25,11 @@ public class BF_backButton : MonoBehaviour {
 
 	void goBack(){
 		Debug.Log ("move camera");
+		// Delete the cards
+		for(int i = 0; i < Cards.transform.childCount; i++){
+			Destroy (Cards.transform.GetChild (i).gameObject);
+		}
+
 		// coroutine handles changing state because it is async
 		StartCoroutine (camera.BackMovement ());
 	}

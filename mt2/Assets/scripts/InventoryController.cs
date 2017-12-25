@@ -12,7 +12,8 @@ public class InventoryController : MonoBehaviour {
 	private Dictionary<int, int> collected; // Used for inventory page that lets you know what you have seen
 
 	// data for storage
-	private int Currency = 300;
+	private int NumberOpened = 0; // How many crates opened
+	private int Currency = 300; // How much currency they have
 	private int OpenCount = 3; // How many to open at once
 
 	// Use this for initialization

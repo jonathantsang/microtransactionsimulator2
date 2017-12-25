@@ -10,7 +10,6 @@ public class BF_RNGController : MonoBehaviour {
 
 	public int getRandom(){
 		int index = Random.Range (low, high - 1);
-		Debug.Log (index);
 		return index;
 	}
 }
