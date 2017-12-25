@@ -31,7 +31,7 @@ public class BF_CameraMovement : MonoBehaviour {
 		// Stop for a few seconds at first for crate opening animation
 		yield return new WaitForSeconds(0.7f);
 
-		Debug.Log (Vector3.Distance (transform.position, Opening));
+		// Debug.Log (Vector3.Distance (transform.position, Opening));
 		while (Vector3.Distance (transform.position, Contents) > 1) {
 			transform.position = Vector3.MoveTowards (transform.position, Contents, speed * Time.deltaTime);
 			yield return new WaitForSeconds (0.01f);

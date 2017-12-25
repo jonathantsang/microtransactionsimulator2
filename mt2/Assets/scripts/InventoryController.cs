@@ -37,7 +37,11 @@ public class InventoryController : MonoBehaviour {
 
 	public void addToInventory(int i){
 		inventory.Add (i);
-		collected [i] = 1;
+		if (collected.ContainsKey (i)) {
+			collected [i] += 1;
+		} else {
+			collected [i] = 1;
+		}
 	}
 
 	public int HowManyToOpen(){
@@ -54,6 +58,10 @@ public class InventoryController : MonoBehaviour {
 
 	public bool checkCollected(int i){
 		return collected.ContainsKey(i) && collected[i] >= 1;
+	}
+
+	public int getCollectedAmount(int i){
+		return collected [i];
 	}
 
 	public int getCurrency(){

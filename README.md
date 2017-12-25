@@ -60,11 +60,11 @@ figure out:
 - worlds
 
 to-do:
-- make total ui for bf
 - scog lotto
-- make other 3 expansion packs
-- save data
-- obfuscate data
+- lootawatch
+- duty of honour
+- player 1 day ground
+- save data and obfuscate fata
 - shop upgrades
 - combos (combining or open in same crate)
 - steamworks achievements

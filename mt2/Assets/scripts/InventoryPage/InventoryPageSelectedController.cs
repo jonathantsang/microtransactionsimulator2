@@ -39,6 +39,8 @@ public class InventoryPageSelectedController : MonoBehaviour {
 		Image image = RightPanel.transform.GetChild (1).GetComponent<Image>();
 		// Description
 		Text description = RightPanel.transform.GetChild (2).GetComponent<Text>();
+		// Amount
+		Text amount = RightPanel.transform.GetChild(3).GetComponent<Text>();
 
 		// check if it has been collected
 		if (IC.checkCollected (id)) {
@@ -51,7 +53,11 @@ public class InventoryPageSelectedController : MonoBehaviour {
 			name.text = item.getName();
 			image.sprite = IDC.getSprite (id);
 			description.text = item.getDescription ();
-
+			if (IC.getCollectedAmount (id) > 99) {
+				amount.text = "99+";
+			} else {
+				amount.text = IC.getCollectedAmount (id).ToString ();
+			}
 		} else {
 			// set the selected rect
 			InventoryPageClick tile = IPC.getItemTile(id).GetComponent<InventoryPageClick>();
@@ -62,6 +68,7 @@ public class InventoryPageSelectedController : MonoBehaviour {
 			name.text = "Locked";
 			image.sprite = locked;
 			description.text = "Locked";
+			amount.text = "0";
 		}
 
 
