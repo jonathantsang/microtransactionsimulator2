@@ -115,6 +115,10 @@ Dec 24:
 - destroy card after it has been opened
 - figure out the merging concept
 
+Dec 25:
+- recipes
+- upgrades do stuff
+
 - merging decided and implemented
 - basic bf loot
 - saves

@@ -25,8 +25,8 @@ public class InventoryController : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 
-		inventory = new List<int> () { 2, 3, 4, 9 }; // TODO fix testing
-		collected = new Dictionary<int, int> {{2,1}, {3, 1}, {4,1}, {9,1}};
+		inventory = new List<int> ();
+		collected = new Dictionary<int, int> ();
 
 	}
 	
@@ -58,5 +58,9 @@ public class InventoryController : MonoBehaviour {
 
 	public int getCurrency(){
 		return Currency;
+	}
+
+	public int getNumberOpened(){
+		return NumberOpened;
 	}
 }

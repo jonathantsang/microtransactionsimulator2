@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 856733348}
   - component: {fileID: 856733347}
   m_Layer: 0
-  m_Name: backlight
+  m_Name: backlight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2115,8 +2115,8 @@ Light:
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 0.1
-  m_Range: 10
-  m_SpotAngle: 5
+  m_Range: 20
+  m_SpotAngle: 53
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -2161,7 +2161,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 856733346}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 990369036}
@@ -2398,6 +2398,28 @@ Prefab:
         type: 2}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108219309121675378, guid: 36c58ef031904482e80045baa770bb8c,
+        type: 2}
+      propertyPath: m_ShadowAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856134747602266, guid: 36c58ef031904482e80045baa770bb8c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531922015059954, guid: 36c58ef031904482e80045baa770bb8c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531922015059954, guid: 36c58ef031904482e80045baa770bb8c, type: 2}
+      propertyPath: m_Name
+      value: cratelight
+      objectReference: {fileID: 0}
+    - target: {fileID: 108219309121675378, guid: 36c58ef031904482e80045baa770bb8c,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36c58ef031904482e80045baa770bb8c, type: 2}
@@ -3615,7 +3637,7 @@ GameObject:
   - component: {fileID: 1559753097}
   - component: {fileID: 1559753096}
   m_Layer: 0
-  m_Name: backlight (1)
+  m_Name: backlight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3632,8 +3654,8 @@ Light:
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 0.1
-  m_Range: 10
-  m_SpotAngle: 5
+  m_Range: 20
+  m_SpotAngle: 53
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3678,7 +3700,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1559753095}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 6, y: 3, z: 0}
+  m_LocalPosition: {x: 6, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 990369036}
@@ -4558,7 +4580,7 @@ GameObject:
   - component: {fileID: 2044803983}
   - component: {fileID: 2044803982}
   m_Layer: 0
-  m_Name: backlight (2)
+  m_Name: backlight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4575,8 +4597,8 @@ Light:
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 0.1
-  m_Range: 10
-  m_SpotAngle: 5
+  m_Range: 20
+  m_SpotAngle: 53
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -4621,7 +4643,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2044803981}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -6, y: 3, z: 0}
+  m_LocalPosition: {x: -6, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 990369036}
