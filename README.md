@@ -119,11 +119,20 @@ Dec 25:
 - figure out if 1-25 in world 1, 26-50 in world2, etc.
 - lootawatch ui
 : - open crate, fly up, move camera to back to see contents
-- worlds art
 - clean up camel case methods (all caps except get/set)
+
+Dec 26:
+- finish lootawatch ui
+- worlds art
 - recipes
 - upgrades do stuff
 
+Dec 27:
 - merging decided and implemented
-- basic bf loot
+
+Dec 28:
 - saves
+
+Dec 29:
+- steamworks
+- graphics for page

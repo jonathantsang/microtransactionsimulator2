@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LW_BackButton.cs" />
+     <Compile Include="Assets\LW_OpenButton.cs" />
+     <Compile Include="Assets\LW_RNGController.cs" />
      <Compile Include="Assets\scripts\BF\BF_backButton.cs" />
      <Compile Include="Assets\scripts\BF\BF_CameraMovement.cs" />
      <Compile Include="Assets\scripts\BF\BF_Card.cs" />

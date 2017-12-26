@@ -32,7 +32,7 @@ public class BF_CameraMovement : MonoBehaviour {
 		yield return new WaitForSeconds(0.7f);
 
 		// Debug.Log (Vector3.Distance (transform.position, Opening));
-		while (Vector3.Distance (transform.position, Contents) > 1) {
+		while (Vector3.Distance (transform.position, Contents) > 0.1f) {
 			transform.position = Vector3.MoveTowards (transform.position, Contents, speed * Time.deltaTime);
 			yield return new WaitForSeconds (0.01f);
 		}
@@ -45,7 +45,7 @@ public class BF_CameraMovement : MonoBehaviour {
 	public IEnumerator BackMovement(){
 		Debug.Log ("move camera back");
 		Debug.Log (Vector3.Distance (transform.position, Contents));
-		while (Vector3.Distance (transform.position, Opening) > 1) {
+		while (Vector3.Distance (transform.position, Opening) > 0.1f) {
 			transform.position = Vector3.MoveTowards (transform.position, Opening, speed * Time.deltaTime);
 			yield return new WaitForSeconds (0.01f);
 		}
