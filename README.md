@@ -124,10 +124,14 @@ Dec 25:
 Dec 26:
 - finish lootawatch ui
 - worlds art
-- recipes
-- upgrades do stuff
+- art up to 50
+
 
 Dec 27:
+- finish up recipes
+- show currency in top right corner
+- upgrades do stuff
+- casino is a clicker
 - merging decided and implemented
 
 Dec 28:

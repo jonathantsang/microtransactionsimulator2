@@ -23,6 +23,7 @@ TagManager:
   - OpenAllButton
   - Lootbox
   - SpinningCard
+  - CreateCards
   layers:
   - Default
   - TransparentFX

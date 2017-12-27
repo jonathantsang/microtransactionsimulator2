@@ -1,8 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/LW_SpinningCard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/LW/LW_RNGController.cs">
     <Files>
-      <File FileName="Assets/scripts/LW_SpinningCard.cs" Line="16" Column="3" />
+      <File FileName="Assets/scripts/BF/BF_CameraMovement.cs" Line="48" Column="63" />
+      <File FileName="Assets/scripts/BF/BF_RNGController.cs" Line="9" Column="34" />
+      <File FileName="Assets/scripts/LW/LW_RNGController.cs" Line="9" Column="35" />
+      <File FileName="Assets/scripts/BF/BF_StateController.cs" Line="15" Column="32" />
+      <File FileName="Assets/scripts/LW/LW_OpenButton.cs" Line="45" Column="18" />
+      <File FileName="Assets/scripts/LW/LW_BackButton.cs" Line="38" Column="56" />
+      <File FileName="Assets/scripts/LW/LW_CreateCards.cs" Line="58" Column="28" />
+      <File FileName="Assets/scripts/LW/LW_SpinningCard.cs" Line="14" Column="35" />
+      <File FileName="Assets/scripts/LW/LW_OpenAnimation.cs" Line="33" Column="1" />
+      <File FileName="Assets/scripts/InventoryController.cs" Line="6" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
