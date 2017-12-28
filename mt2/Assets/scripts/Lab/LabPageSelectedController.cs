@@ -32,4 +32,8 @@ public class LabPageSelectedController : MonoBehaviour {
 		// do stuff
 		previousSlot = id;
 	}
+
+	// path is click icon then click slot
+
+	// path is clock slot then click icon
 }
