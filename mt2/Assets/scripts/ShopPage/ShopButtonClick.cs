@@ -31,6 +31,7 @@ public class ShopButtonClick : MonoBehaviour {
 			Debug.Log ("bought");
 			SC.Unlock(shopIndex);
 			// Destroy the object so it can't be bought again
+
 		} else {
 			Debug.Log ("not enough money");
 		}
@@ -39,5 +40,9 @@ public class ShopButtonClick : MonoBehaviour {
 	public void setIndexAndPrice(int i, int p){
 		shopIndex = i;
 		price = p;
+	}
+
+	public int getPrice(){
+		return price;
 	}
 }

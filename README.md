@@ -128,11 +128,11 @@ Dec 26:
 
 
 Dec 27:
-- finish up recipes
-- show currency in top right corner
+- finish up recipes-
+- show currency in top right corner-
+- merging decided and implemented
 - upgrades do stuff
 - casino is a clicker
-- merging decided and implemented
 
 Dec 28:
 - saves

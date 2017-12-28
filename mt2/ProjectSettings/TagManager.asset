@@ -24,6 +24,7 @@ TagManager:
   - Lootbox
   - SpinningCard
   - CreateCards
+  - Currency
   layers:
   - Default
   - TransparentFX

@@ -44,7 +44,11 @@ public class InventoryController : MonoBehaviour {
 		}
 	}
 
-	public int HowManyToOpen(){
+	public void decreaseCurrency(int i){
+		Currency -= i;
+	}
+
+	public int getOpenCount(){
 		return OpenCount;
 	}
 

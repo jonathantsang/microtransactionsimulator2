@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Deals with SETTING UP the shop page, displaying and not displaying already bought
 public class ShopController : MonoBehaviour {
 
 	ShopUnlocked SU;
+	ShopCurrency SC;
+	InventoryController IC;
 	List<GameObject> UpgradeList;
 
 	// Use this for initialization
 	void Start () {
 		UpgradeList = new List<GameObject> ();
-		SU = GameObject.FindGameObjectWithTag ("ShopUnlocked").GetComponent<ShopUnlocked> (); 
+		SU = GameObject.FindGameObjectWithTag ("ShopUnlocked").GetComponent<ShopUnlocked> ();
+		SC = GameObject.FindGameObjectWithTag ("Currency").GetComponent<ShopCurrency> ();
+		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
 		SetupUpgrades();
 	}
 
@@ -32,15 +37,15 @@ public class ShopController : MonoBehaviour {
 		}
 	}
 
-	public void Bought(int i){
-		
-	}
-
 	public void Unlock(int i){
 		// Store Unlocked marks it
 		SU.Unlock (i);
 		// Subtrack price from currency
-
+		List<int> prices = new List<int> {99, 499, 999, 299, 399, 109, 394, 808, 2048};
+		int price = prices [i];
+		IC.decreaseCurrency (price);
+		// Decrease Currency Text
+		SC.UpdateText();
 		// Destroy the upgrade in shopcontroller
 		Destroy (UpgradeList [i]);
 	}

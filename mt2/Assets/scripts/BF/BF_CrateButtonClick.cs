@@ -49,7 +49,7 @@ public class BF_CrateButtonClick : MonoBehaviour {
 
 	void CreateCrates(){
 		// materialize the crates on the screen ui
-		int OpenCount = IC.HowManyToOpen();
+		int OpenCount = IC.getOpenCount();
 		for (int i = 0; i < OpenCount; i++) {
 			// call random
 			int id = RNGcontroller.getRandom();

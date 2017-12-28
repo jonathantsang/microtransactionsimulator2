@@ -6,6 +6,7 @@ public class ShopUnlocked : MonoBehaviour {
 
 	public static ShopUnlocked instance;
 
+	InventoryController IC;
 	List<int> shopUnlockedList;
 
 	// Use this for initialization
@@ -31,10 +32,5 @@ public class ShopUnlocked : MonoBehaviour {
 
 	public int CheckUpgrades(int i){
 		return shopUnlockedList [i];
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
