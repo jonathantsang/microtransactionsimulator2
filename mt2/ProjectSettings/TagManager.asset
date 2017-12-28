@@ -25,6 +25,7 @@ TagManager:
   - CreateCards
   - Currency
   - SelectedController
+  - LabController
   layers:
   - Default
   - TransparentFX

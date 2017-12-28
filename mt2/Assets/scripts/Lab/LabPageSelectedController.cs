@@ -5,12 +5,13 @@ using UnityEngine;
 public class LabPageSelectedController : MonoBehaviour {
 
 	// Person clicks on a space in the equation, last one pressed it puts the item there
-	int previousID;
-	int previousSlot;
+	int previousID = -1;
+	int previousSlot = -1;
+	LabController LC;
 
 	// Use this for initialization
 	void Start () {
-		
+		LC = GameObject.FindGameObjectWithTag ("LabController").GetComponent<LabController> ();
 	}
 	
 	// Update is called once per frame
@@ -19,9 +20,21 @@ public class LabPageSelectedController : MonoBehaviour {
 	}
 
 	public void SelectItem(int id){
+		if (id == -1) {
+			return;
+		}
 		Debug.Log ("selected item " + id);
-		// do stuff
-		previousID = id;
+
+		// selected slot first
+		if (previousSlot != -1) {
+			// input the slot as previousID
+			Debug.Log ("slot " + previousSlot + " puts " + id);
+			LC.InputSlot (previousSlot, id);
+			clear ();
+		} else {
+			previousID = id;
+		}
+
 	}
 
 	public void SelectSlot(int id){
@@ -30,10 +43,21 @@ public class LabPageSelectedController : MonoBehaviour {
 			return;
 		}
 		// do stuff
-		previousSlot = id;
+
+		// selected item first
+		if (previousID != -1) {
+			// input the slot as previousID
+			Debug.Log ("slot " + id + " puts " + previousID);
+			LC.InputSlot (id, previousID);
+			clear ();
+		} else {
+			previousSlot = id;
+		}
+
 	}
 
-	// path is click icon then click slot
-
-	// path is clock slot then click icon
+	void clear(){
+		previousID = -1;
+		previousSlot = -1;
+	}
 }

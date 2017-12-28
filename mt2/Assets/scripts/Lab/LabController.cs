@@ -8,6 +8,10 @@ public class LabController : MonoBehaviour {
 
 	GameObject Content;
 	GameObject TopPanel;
+	GameObject SlotOne; // slot one
+	GameObject SlotTwo; // slot two
+	GameObject ResultSlot;
+
 	InventoryController IC;
 	ItemDirectoryController IDC;
 	int rowLength = 10;
@@ -19,6 +23,10 @@ public class LabController : MonoBehaviour {
 		IDC = GameObject.FindGameObjectWithTag ("ItemDirectoryController").GetComponent<ItemDirectoryController> ();
 		Content = GameObject.FindGameObjectWithTag ("Content").gameObject;
 		TopPanel = GameObject.FindGameObjectWithTag ("RightPanel").gameObject; // Correct tag, just reuse
+		SlotOne = TopPanel.transform.GetChild(0).transform.GetChild(1).gameObject;
+		SlotTwo = TopPanel.transform.GetChild(2).transform.GetChild(1).gameObject;
+		ResultSlot = TopPanel.transform.GetChild(4).transform.GetChild(1).gameObject;
+
 		// Load
 		LoadLab ();
 	}
@@ -52,10 +60,19 @@ public class LabController : MonoBehaviour {
 
 		// Set ID for the item slots so it can be identified
 		// Child 0, 2 get the component to set the ID
-		TopPanel.transform.GetChild(0).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(0);
-		TopPanel.transform.GetChild(2).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(2);
+		SlotOne.GetComponent<LabPageItemSlotClick>().setID(0);
+		SlotTwo.GetComponent<LabPageItemSlotClick>().setID(2);
 		// Set result to -1 so it cannot be affected
-		TopPanel.transform.GetChild(4).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(-1);
+		ResultSlot.GetComponent<LabPageItemSlotClick>().setID(-1);
+	}
 
+	public void InputSlot(int slot, int id){
+		if (slot == 0) {
+			// Set slot one to IDC id sprite
+			SlotOne.GetComponent<Image>().sprite = IDC.getSprite(id);
+		} else if (slot == 2) {
+			// Set slot two to IDC id sprite
+			SlotTwo.GetComponent<Image>().sprite = IDC.getSprite(id);
+		}
 	}
 }

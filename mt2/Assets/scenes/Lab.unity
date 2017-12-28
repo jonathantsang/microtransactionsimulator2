@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 68948084}
   m_Layer: 0
   m_Name: LabController
-  m_TagString: Untagged
+  m_TagString: LabController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1165,6 +1165,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 174f36e01f4c04fdea02bbe8c07e408a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &588261289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 588261291}
+  - component: {fileID: 588261290}
+  m_Layer: 0
+  m_Name: MergeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588261290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588261289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbd0540c78e5402b803d521867cc69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &588261291
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588261289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &641111834
 Prefab:
   m_ObjectHideFlags: 0
@@ -1571,7 +1611,7 @@ MonoBehaviour:
   m_Content: {fileID: 1165673435}
   m_Horizontal: 1
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -2924,7 +2964,7 @@ GameObject:
   - component: {fileID: 1580262894}
   - component: {fileID: 1580262893}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: RightPanel
   m_TagString: RightPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
