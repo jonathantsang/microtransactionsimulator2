@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LabController : MonoBehaviour {
 
 	GameObject Content;
+	GameObject TopPanel;
 	InventoryController IC;
 	ItemDirectoryController IDC;
 	int rowLength = 10;
@@ -17,6 +18,7 @@ public class LabController : MonoBehaviour {
 		IC = GameObject.FindGameObjectWithTag("InventoryController").GetComponent<InventoryController>();
 		IDC = GameObject.FindGameObjectWithTag ("ItemDirectoryController").GetComponent<ItemDirectoryController> ();
 		Content = GameObject.FindGameObjectWithTag ("Content").gameObject;
+		TopPanel = GameObject.FindGameObjectWithTag ("RightPanel").gameObject; // Correct tag, just reuse
 		// Load
 		LoadLab ();
 	}
@@ -31,12 +33,13 @@ public class LabController : MonoBehaviour {
 		for(int i = 0; i < Content.transform.childCount; i++){
 			// Go to 0 to 9 (1-10) for each inventory item
 			for(int j = 0; j < rowLength; j++){
+				int id = i * rowLength + j;
+				// LPSC
+				Content.transform.GetChild(i).transform.GetChild(j).GetComponent<LabPageClick>().setID(id);
 				// icon
 				Image image = Content.transform.GetChild(i).transform.GetChild(j).GetComponent<Image>();
 				// count (1) child is text
 				Text count = Content.transform.GetChild(i).transform.GetChild(j).transform.GetChild(1).GetComponent<Text>();
-
-				int id = i * rowLength + j;
 				if (IC.checkCollected (id)) {
 					// use IDC
 					image.sprite = IDC.getSprite(id);
@@ -45,8 +48,14 @@ public class LabController : MonoBehaviour {
 					count.text = "";
 				}
 			}
-
 		}
+
+		// Set ID for the item slots so it can be identified
+		// Child 0, 2 get the component to set the ID
+		TopPanel.transform.GetChild(0).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(0);
+		TopPanel.transform.GetChild(2).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(2);
+		// Set result to -1 so it cannot be affected
+		TopPanel.transform.GetChild(4).transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(-1);
 
 	}
 }
