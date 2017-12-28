@@ -10,7 +10,7 @@ public class InventoryPageClick : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		IPSC = GameObject.FindGameObjectWithTag ("InventoryPageSelectedController").GetComponent<InventoryPageSelectedController> ();
+		IPSC = GameObject.FindGameObjectWithTag ("SelectedController").GetComponent<InventoryPageSelectedController> ();
 		// turn off selected
 		selected = transform.GetChild(0).gameObject;
 		selected.SetActive (false);

@@ -25,8 +25,9 @@ public class InventoryController : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 
-		inventory = new List<int> ();
-		collected = new Dictionary<int, int> ();
+		// TODO TESTING
+		inventory = new List<int> () {2, 3, 6, 8, 9};
+		collected = new Dictionary<int, int> () {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {11, 2}};
 
 	}
 	

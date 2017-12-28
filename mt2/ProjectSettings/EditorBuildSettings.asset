@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/Shop2.unity
     guid: ada044a96788c4a1f9fcaf951649249e
+  - enabled: 1
+    path: Assets/scenes/Lab.unity
+    guid: 737f5fd830b644658b3b34781a14d4af
