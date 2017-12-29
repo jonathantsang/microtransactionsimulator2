@@ -47,7 +47,7 @@ public class BF_Card : MonoBehaviour {
 		// wait for rotation before turning front off
 		StartCoroutine(Wait(15)); // 20 * 0.1 is 2 seconds 
 		// add item to the inventory
-		IC.addToInventory(CardItem.getID());
+		IC.AddToInventory(CardItem.getID());
 	}
 
 	IEnumerator Wait(float time){

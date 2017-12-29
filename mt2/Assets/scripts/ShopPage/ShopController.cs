@@ -43,7 +43,7 @@ public class ShopController : MonoBehaviour {
 		// Subtrack price from currency
 		List<int> prices = new List<int> {99, 499, 999, 299, 399, 109, 394, 808, 2048};
 		int price = prices [i];
-		IC.decreaseCurrency (price);
+		IC.DecreaseCurrency (price);
 		// Decrease Currency Text
 		SC.UpdateText();
 		// Destroy the upgrade in shopcontroller

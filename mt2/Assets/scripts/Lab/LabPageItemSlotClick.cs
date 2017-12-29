@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class LabPageItemSlotClick : MonoBehaviour {
 
+	// refers to 0 or 2 for each slot
 	int id;
+	// refers to the ID of the ITEM at the slot
+	int itemID;
+
 	LabPageSelectedController LPSC;
 
 	// Use this for initialization
@@ -20,4 +24,17 @@ public class LabPageItemSlotClick : MonoBehaviour {
 	public void setID(int i){
 		id = i;
 	}
+
+	public int getID(){
+		return id;
+	}
+
+	public void setItemID(int i){
+		itemID = i;
+	}
+
+	public int getItemID(){
+		return itemID;
+	}
+		
 }

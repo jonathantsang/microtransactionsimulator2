@@ -68,4 +68,8 @@ public class ItemDirectoryController : MonoBehaviour {
 		return Sprites [i];
 	}
 
+	public string getName(int i){
+		return directory [i].getName ();
+	}
+
 }

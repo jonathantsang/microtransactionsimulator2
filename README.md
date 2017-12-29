@@ -126,17 +126,18 @@ Dec 26:
 - worlds art
 - art up to 50
 
-
 Dec 27:
 - finish up recipes-
 - show currency in top right corner-
+
+Dec 28:
 - merging decided and implemented
 - upgrades do stuff
 - casino is a clicker
 
-Dec 28:
+Dec 29:
 - saves
 
-Dec 29:
+Dec 30:
 - steamworks
 - graphics for page

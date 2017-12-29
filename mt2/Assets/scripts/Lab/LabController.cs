@@ -23,8 +23,8 @@ public class LabController : MonoBehaviour {
 		IDC = GameObject.FindGameObjectWithTag ("ItemDirectoryController").GetComponent<ItemDirectoryController> ();
 		Content = GameObject.FindGameObjectWithTag ("Content").gameObject;
 		TopPanel = GameObject.FindGameObjectWithTag ("RightPanel").gameObject; // Correct tag, just reuse
-		SlotOne = TopPanel.transform.GetChild(0).transform.GetChild(1).gameObject;
-		SlotTwo = TopPanel.transform.GetChild(2).transform.GetChild(1).gameObject;
+		SlotOne = TopPanel.transform.GetChild(0).gameObject;
+		SlotTwo = TopPanel.transform.GetChild(2).gameObject;
 		ResultSlot = TopPanel.transform.GetChild(4).transform.GetChild(1).gameObject;
 
 		// Load
@@ -59,9 +59,10 @@ public class LabController : MonoBehaviour {
 		}
 
 		// Set ID for the item slots so it can be identified
-		// Child 0, 2 get the component to set the ID
-		SlotOne.GetComponent<LabPageItemSlotClick>().setID(0);
-		SlotTwo.GetComponent<LabPageItemSlotClick>().setID(2);
+		// Child 0, 1 get the component to set the ID
+		SlotOne.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(0);
+		SlotTwo.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(1);
+
 		// Set result to -1 so it cannot be affected
 		ResultSlot.GetComponent<LabPageItemSlotClick>().setID(-1);
 	}
@@ -69,10 +70,18 @@ public class LabController : MonoBehaviour {
 	public void InputSlot(int slot, int id){
 		if (slot == 0) {
 			// Set slot one to IDC id sprite
-			SlotOne.GetComponent<Image>().sprite = IDC.getSprite(id);
-		} else if (slot == 2) {
+			SlotOne.transform.GetChild(1).GetComponent<Image>().sprite = IDC.getSprite(id);
+			// Set the Text above
+			SlotOne.transform.GetChild(0).GetComponent<Text>().text = IDC.getName(id);
+			// set the ID
+			SlotOne.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setItemID(id);
+		} else if (slot == 1) {
 			// Set slot two to IDC id sprite
-			SlotTwo.GetComponent<Image>().sprite = IDC.getSprite(id);
+			SlotTwo.transform.GetChild(1).GetComponent<Image>().sprite = IDC.getSprite(id);
+			// Set the Text above
+			SlotTwo.transform.GetChild(0).GetComponent<Text>().text = IDC.getName(id);
+			// Set the ID
+			SlotTwo.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setItemID(id);
 		}
 	}
 }

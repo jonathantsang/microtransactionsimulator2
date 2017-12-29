@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 218822808}
   - component: {fileID: 218822807}
   - component: {fileID: 218822806}
+  - component: {fileID: 218822809}
   m_Layer: 5
   m_Name: MergeButton
   m_TagString: Untagged
@@ -965,6 +966,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218822804}
+--- !u!114 &218822809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218822804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c753b311086ca4ecfa1470ca510348cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &286618363
 Prefab:
   m_ObjectHideFlags: 0
@@ -1175,8 +1187,8 @@ GameObject:
   - component: {fileID: 588261291}
   - component: {fileID: 588261290}
   m_Layer: 0
-  m_Name: MergeController
-  m_TagString: Untagged
+  m_Name: RecipeDirectoryController
+  m_TagString: RecipeDirectoryController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1189,7 +1201,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 588261289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbd0540c78e5402b803d521867cc69f, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f11905843304474a935113323705cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &588261291
@@ -2384,7 +2396,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1766460992530170, guid: b55a5c3fb710041379c70c37f8d68535, type: 2}
       propertyPath: m_Name
-      value: ItemSlot (1)
+      value: ItemSlot 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55a5c3fb710041379c70c37f8d68535, type: 2}
@@ -2948,6 +2960,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766460992530170, guid: b55a5c3fb710041379c70c37f8d68535, type: 2}
+      propertyPath: m_Name
+      value: ItemSlot1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55a5c3fb710041379c70c37f8d68535, type: 2}

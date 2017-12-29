@@ -55,7 +55,7 @@ public class LW_CreateCards : MonoBehaviour {
 				name.text = item.getName ();
 
 				// add to the inventory
-				IC.addToInventory (id);
+				IC.AddToInventory (id);
 			} else if (choose == 1) {
 				GameObject CreatedCard = Instantiate (Card2, Positions.transform.GetChild (i).transform.position, Quaternion.identity);
 				CreatedCard.transform.SetParent (CardHolder.transform);
@@ -76,7 +76,7 @@ public class LW_CreateCards : MonoBehaviour {
 				name.text = item.getName ();
 
 				// add to the inventory
-				IC.addToInventory (id);
+				IC.AddToInventory (id);
 			} else if (choose == 2) {
 				GameObject CreatedCard = Instantiate (Card3, Positions.transform.GetChild (i).transform.position, Quaternion.identity);
 				CreatedCard.transform.SetParent (CardHolder.transform);
@@ -97,7 +97,7 @@ public class LW_CreateCards : MonoBehaviour {
 				name.text = item.getName ();
 
 				// add to the inventory
-				IC.addToInventory (id);
+				IC.AddToInventory (id);
 			}
 		}
 	}
