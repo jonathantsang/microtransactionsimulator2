@@ -79,6 +79,14 @@ shop:
 - Odyssey 7 
 - california love 8
 - endgame 9
+	// Shop Upgrades
+	// 1-3 Opens 1 more crate
+	// 4 unlocks casino scog lotto
+	// 5 luck tweaked
+	// 6 retro game
+	// 7 unlocks player 1 z ground
+	// 8 achievement (cali or bust)
+	// 9 secondary shop
 
 bugs:
 - crate button pressed multiple times goes too fast
@@ -132,13 +140,18 @@ Dec 27:
 
 Dec 28:
 - merging decided and implemented
-
+- finished basic merging
 
 Dec 29:
-- worlds implemented ish
+- worlds implemented (up to lootawatch)
+- planned shop upgrades
+
 - make art for merging
 - upgrades do stuff
-- casino is a clicker
+- player 1 ground ui
+- duty of honour ui
+- lootawatch ui
+
 - saves
 
 Dec 30:

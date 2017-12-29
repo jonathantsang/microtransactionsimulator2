@@ -11,6 +11,15 @@ public class ShopController : MonoBehaviour {
 	InventoryController IC;
 	List<GameObject> UpgradeList;
 
+	// Shop Upgrades
+	// 1-3 Opens 1 more crate
+	// 4 unlocks casino scog lotto
+	// 5 luck tweaked
+	// 6 retro game
+	// 7 unlocks player 1 z ground
+	// 8 achievement (cali or bust)
+	// 9 secondary shop
+
 	// Use this for initialization
 	void Start () {
 		UpgradeList = new List<GameObject> ();
