@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class MergeButton : MonoBehaviour {
 
+	public GameObject Popup;
+
 	InventoryController IC;
 	RecipeDirectoryController RDC;
+	LabController LC;
 	LabPageItemSlotClick SlotOne;
 	LabPageItemSlotClick SlotTwo;
 
@@ -15,6 +18,8 @@ public class MergeButton : MonoBehaviour {
 		// Linking
 		RDC = GameObject.FindGameObjectWithTag("RecipeDirectoryController").GetComponent<RecipeDirectoryController>();
 		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
+		LC = GameObject.FindGameObjectWithTag ("LabController").GetComponent<LabController> ();
+
 		SlotOne = GameObject.FindGameObjectWithTag ("RightPanel").transform.GetChild (0).transform.GetChild (1).GetComponent<LabPageItemSlotClick> ();
 		SlotTwo = GameObject.FindGameObjectWithTag ("RightPanel").transform.GetChild (2).transform.GetChild (1).GetComponent<LabPageItemSlotClick> ();
 
@@ -34,13 +39,23 @@ public class MergeButton : MonoBehaviour {
 			Debug.Log("valid recipe");
 			// call recipe done in inventory
 			IC.AddToRecipes(check);
-			// valid recipe
+			// valid recipe, create popup textbox of recipe
+			Instantiate(Popup, new Vector3(), Quaternion.identity);
+			// Update each recipe with sprite later
+			// Popup.transform.GetChild (1).GetComponent<SpriteRenderer> ().sprite = RDC.getSprite (check);
+			Popup.transform.GetChild (2).GetComponent<TextMesh> ().text = RDC.getName (check);
 		} else {
 			// invalid recipe
 			Debug.Log("invalid recipe");
 		}
 
 		// decrement the amounts in the inventory
+		IC.RemoveFromInventory (i1);
+		IC.RemoveFromInventory (i2);
+
+		// Update the text on the LabInventory
+		LC.UpdateCountText (i1);
+		LC.UpdateCountText (i2);
 	}
 
 }

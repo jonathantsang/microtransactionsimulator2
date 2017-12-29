@@ -47,6 +47,12 @@ public class InventoryController : MonoBehaviour {
 		}
 	}
 
+	public void RemoveFromInventory(int i){
+		if (collected.ContainsKey (i)) {
+			collected [i] -= 1;
+		}
+	}
+
 	public void AddToRecipes(int i){
 		if (recipesUnlocked.ContainsKey (i)) {
 			recipesUnlocked [i] += 1;
@@ -72,10 +78,15 @@ public class InventoryController : MonoBehaviour {
 	}
 
 	public bool checkCollected(int i){
-		return collected.ContainsKey(i) && collected[i] >= 1;
+		// ONLY checks it has it, not if it is more than 0 amount
+		return collected.ContainsKey (i);
 	}
 
 	public int getCollectedAmount(int i){
+		// If it is not in it
+		if (!checkCollected (i)) {
+			return -1;
+		}
 		return collected [i];
 	}
 

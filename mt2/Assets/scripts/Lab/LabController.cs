@@ -84,4 +84,12 @@ public class LabController : MonoBehaviour {
 			SlotTwo.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setItemID(id);
 		}
 	}
+
+	public void UpdateCountText(int id){
+		int i = id / 10;
+		int j = id % 10;
+		Debug.Log (i + " " + j);
+		// Should be decreased since it decrements from the inventory first
+		Content.transform.GetChild(i).transform.GetChild(j).transform.GetChild(1).GetComponent<Text>().text = IC.getCollectedAmount(id).ToString();
+	}
 }

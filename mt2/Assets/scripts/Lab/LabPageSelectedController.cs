@@ -8,9 +8,11 @@ public class LabPageSelectedController : MonoBehaviour {
 	int previousID = -1;
 	int previousSlot = -1;
 	LabController LC;
+	InventoryController IC;
 
 	// Use this for initialization
 	void Start () {
+		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
 		LC = GameObject.FindGameObjectWithTag ("LabController").GetComponent<LabController> ();
 	}
 	
@@ -23,6 +25,11 @@ public class LabPageSelectedController : MonoBehaviour {
 		if (id == -1) {
 			return;
 		}
+		// NEED to check IC has collected the item, and it has at least 1 to count as valid selection
+		if(!IC.checkCollected(id) || IC.getCollectedAmount(id) < 1){
+			return;
+		}
+
 		Debug.Log ("selected item " + id);
 
 		// selected slot first

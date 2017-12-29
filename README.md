@@ -34,7 +34,7 @@ Duty of Honour: Supplying the Drops:
 Player 1 Day Ground:
 -
 
-SkinCrate:
+// (dunno) SkinCrate:
 - 
 
 inventory:
@@ -132,12 +132,24 @@ Dec 27:
 
 Dec 28:
 - merging decided and implemented
-- upgrades do stuff
-- casino is a clicker
+
 
 Dec 29:
+- worlds implemented ish
+- make art for merging
+- upgrades do stuff
+- casino is a clicker
 - saves
 
 Dec 30:
 - steamworks
 - graphics for page
+
+plan:
+- finish merging
+- get upgrades
+- finish player 1 ground, duty of honour
+- more art
+- saves
+- steamworks
+- graphics

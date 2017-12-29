@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class RecipeDirectoryController : MonoBehaviour {
 
+	public Sprite seventysix, seventyseven, seventyeight,seventynine, eighty;
 	List<Recipe> Recipes;
+	List<Sprite> Sprites;
 
 	// Use this for initialization
 	void Start () {
 		Recipes = new List<Recipe> () {
 			new Recipe(1,10,18, "War never changes...")
+		};
+		Sprites = new List<Sprite> () {
+			seventysix, seventyseven, seventyeight,seventynine, eighty
 		};
 	}
 	
@@ -27,5 +32,13 @@ public class RecipeDirectoryController : MonoBehaviour {
 			}
 		}
 		return -1;
+	}
+
+	public Sprite getSprite(int i){
+		return Sprites [i];
+	}
+
+	public string getName(int i){
+		return Recipes [i].getName ();
 	}
 }
