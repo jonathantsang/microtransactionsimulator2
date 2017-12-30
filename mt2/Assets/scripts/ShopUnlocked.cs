@@ -40,13 +40,13 @@ public class ShopUnlocked : MonoBehaviour {
 			// unlock scog lotto
 		} else if (i == 4) {
 			// luck or not really
-			// duty of honour expansion
 		} else if (i == 5) {
 			// retro game
 		} else if (i == 6) {
 			// player 1 z ground
 		} else if (i == 7) {
 			// achievement
+			// duty of honour expansion
 		} else if (i == 8) {
 			// second shop
 		} 
