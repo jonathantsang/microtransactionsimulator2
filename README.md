@@ -143,11 +143,12 @@ Dec 28:
 - finished basic merging
 
 Dec 29:
-- worlds implemented (up to lootawatch)
-- planned shop upgrades
+- worlds page implemented (up to lootawatch) - 
+- planned shop upgrades - 
 
-- make art for merging
 - upgrades do stuff
+- make art for merging
+
 - player 1 ground ui
 - duty of honour ui
 - lootawatch ui
@@ -163,6 +164,7 @@ plan:
 - get upgrades
 - finish player 1 ground, duty of honour
 - more art
+- recipe page, show some unlocked
 - saves
 - steamworks
 - graphics

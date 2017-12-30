@@ -57,7 +57,6 @@ public class LabController : MonoBehaviour {
 				}
 			}
 		}
-
 		// Set ID for the item slots so it can be identified
 		// Child 0, 1 get the component to set the ID
 		SlotOne.transform.GetChild(1).GetComponent<LabPageItemSlotClick>().setID(0);

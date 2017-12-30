@@ -9,9 +9,14 @@ public class LabPageSelectedController : MonoBehaviour {
 	int previousSlot = -1;
 	LabController LC;
 	InventoryController IC;
+	GameObject SlotOne;
+	GameObject SlotTwo;
 
 	// Use this for initialization
 	void Start () {
+		SlotOne = GameObject.FindGameObjectWithTag ("RightPanel").transform.GetChild (0).gameObject;
+		SlotTwo = GameObject.FindGameObjectWithTag ("RightPanel").transform.GetChild (2).gameObject;
+
 		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
 		LC = GameObject.FindGameObjectWithTag ("LabController").GetComponent<LabController> ();
 	}
@@ -32,8 +37,23 @@ public class LabPageSelectedController : MonoBehaviour {
 
 		Debug.Log ("selected item " + id);
 
-		// selected slot first
+		// selected slot first, put the item id in the slot
 		if (previousSlot != -1) {
+			// IF it is already used in one slot, and it has only 1 it is possible to use 1 for two slots
+			// inputting id into previousSLOT, so check the other one to see if it is the same id AND IC.getCollectedAmount(id) == 1
+			int other = Mathf.Abs(previousSlot - 1);
+			int checkID = 0;
+			if (other == 0) {
+				checkID = SlotOne.transform.GetChild (1).GetComponent<LabPageItemSlotClick> ().getItemID ();
+			} else if (other == 1) {
+				checkID = SlotTwo.transform.GetChild (1).GetComponent<LabPageItemSlotClick> ().getItemID ();
+			}
+			Debug.Log (checkID);
+			if (IC.getCollectedAmount (id) == 1 && checkID == id) {
+				Debug.Log("Edge case fixed of splitting 1");
+				return;
+			}
+
 			// input the slot as previousID
 			Debug.Log ("slot " + previousSlot + " puts " + id);
 			LC.InputSlot (previousSlot, id);
@@ -45,14 +65,28 @@ public class LabPageSelectedController : MonoBehaviour {
 	}
 
 	public void SelectSlot(int id){
-		Debug.Log ("selected item slot " + id);
 		if (id == -1) {
 			return;
 		}
 		// do stuff
 
-		// selected item first
+		// selected item first, put the previousID into id slot
 		if (previousID != -1) {
+			// IF it is already used in one slot, and it has only 1 it is possible to use 1 for two slots
+			// inputting previousID into id slot, so check the other one to see if it is the same id AND IC.getCollectedAmount(id) == 1
+			int other = Mathf.Abs(id - 1);
+			int checkID = 0;
+			if (other == 0) {
+				checkID = SlotOne.transform.GetChild (1).GetComponent<LabPageItemSlotClick> ().getItemID ();
+			} else if (other == 1) {
+				checkID = SlotTwo.transform.GetChild (1).GetComponent<LabPageItemSlotClick> ().getItemID ();
+			}
+			Debug.Log (checkID);
+			if (IC.getCollectedAmount (previousID) == 1 && checkID == previousID) {
+				Debug.Log("Edge case fixed of splitting 1");
+				return;
+			}
+				
 			// input the slot as previousID
 			Debug.Log ("slot " + id + " puts " + previousID);
 			LC.InputSlot (id, previousID);

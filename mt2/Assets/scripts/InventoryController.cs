@@ -8,13 +8,13 @@ public class InventoryController : MonoBehaviour {
 	public static InventoryController instance;
 
 	// each item is denoted as an int for id
-	private List<int> inventory;
-	private Dictionary<int, int> collected; // Used for inventory page that lets you know what you have seen
-	private Dictionary<int, int> recipesUnlocked; // Recipes unlocked
+	private List<int> Inventory;
+	private Dictionary<int, int> Collected; // Used for inventory page that lets you know what you have seen
+	private Dictionary<int, int> RecipesUnlocked; // Recipes unlocked
 
 	// data for storage
 	private int NumberOpened = 0; // How many crates opened
-	private int Currency = 300; // How much currency they have
+	private int Currency = 10; // How much currency they have
 	private int OpenCount = 3; // How many to open at once
 
 	// Use this for initialization
@@ -27,9 +27,9 @@ public class InventoryController : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		// TODO TESTING
-		recipesUnlocked = new Dictionary<int, int>();
-		inventory = new List<int> () {2, 3, 6, 8, 9, 10, 16};
-		collected = new Dictionary<int, int> () {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}};
+		RecipesUnlocked = new Dictionary<int, int>();
+		Inventory = new List<int> () {2, 3, 6, 8, 9, 10, 16};
+		Collected = new Dictionary<int, int> () {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}};
 
 	}
 	
@@ -39,47 +39,55 @@ public class InventoryController : MonoBehaviour {
 	}
 
 	public void AddToInventory(int i){
-		inventory.Add (i);
-		if (collected.ContainsKey (i)) {
-			collected [i] += 1;
+		Inventory.Add (i);
+		if (Collected.ContainsKey (i)) {
+			Collected [i] += 1;
 		} else {
-			collected [i] = 1;
+			Collected [i] = 1;
 		}
 	}
 
 	public void RemoveFromInventory(int i){
-		if (collected.ContainsKey (i)) {
-			collected [i] -= 1;
+		if (Collected.ContainsKey (i) && Collected[i] > 0) {
+			Collected [i] -= 1;
 		}
 	}
 
 	public void AddToRecipes(int i){
-		if (recipesUnlocked.ContainsKey (i)) {
-			recipesUnlocked [i] += 1;
+		if (RecipesUnlocked.ContainsKey (i)) {
+			RecipesUnlocked [i] += 1;
 		} else {
-			recipesUnlocked [i] = 1;
+			RecipesUnlocked [i] = 1;
 		}
 	}
 
-	public void DecreaseCurrency(int i){
-		Currency -= i;
+	public bool CheckNewRecipe(int i){
+		if (RecipesUnlocked.ContainsKey (i)) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	public void DecreaseCurrency(int amt){
+		Currency -= amt;
+	}
+
+	public void IncreaseCurrency(int amt){
+		Currency += amt;
 	}
 
 	public int getOpenCount(){
 		return OpenCount;
 	}
 
-	public List<int> getInventory(){
-		return inventory;
-	}
-
 	public Dictionary<int, int> getCollected(){
-		return collected;
+		return Collected;
 	}
 
 	public bool checkCollected(int i){
 		// ONLY checks it has it, not if it is more than 0 amount
-		return collected.ContainsKey (i);
+		return Collected.ContainsKey (i);
 	}
 
 	public int getCollectedAmount(int i){
@@ -87,7 +95,7 @@ public class InventoryController : MonoBehaviour {
 		if (!checkCollected (i)) {
 			return -1;
 		}
-		return collected [i];
+		return Collected [i];
 	}
 
 	public int getCurrency(){
@@ -96,5 +104,10 @@ public class InventoryController : MonoBehaviour {
 
 	public int getNumberOpened(){
 		return NumberOpened;
+	}
+
+	// USED FOR SHOP UPGRADES
+	public void IncrementOpenCount(){
+		OpenCount++;
 	}
 }

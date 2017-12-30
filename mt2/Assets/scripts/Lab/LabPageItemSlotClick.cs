@@ -36,5 +36,9 @@ public class LabPageItemSlotClick : MonoBehaviour {
 	public int getItemID(){
 		return itemID;
 	}
+
+	public void ResetItemID(){
+		itemID = -1;
+	}
 		
 }

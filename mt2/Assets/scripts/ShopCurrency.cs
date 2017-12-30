@@ -14,7 +14,7 @@ public class ShopCurrency : MonoBehaviour {
 		currency = GetComponent<Text> ();
 		// Loads current currency into the text
 		int amount = IC.getCurrency();
-		currency.text = amount.ToString ();
+		currency.text = amount.ToString () + "C";
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class ShopCurrency : MonoBehaviour {
 	public void UpdateText(){
 		// Loads current currency into the text
 		int amount = IC.getCurrency();
-		currency.text = amount.ToString ();
+		currency.text = amount.ToString () + "C";
 	}
 
 

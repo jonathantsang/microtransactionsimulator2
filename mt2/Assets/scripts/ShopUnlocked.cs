@@ -28,6 +28,28 @@ public class ShopUnlocked : MonoBehaviour {
 
 	public void Unlock(int i){
 		shopUnlockedList [i] = 1;
+
+		// Based on the index, it does different upgrades
+		if (i == 0) {
+			IC.IncrementOpenCount ();
+		} else if (i == 1) {
+			IC.IncrementOpenCount ();
+		} else if (i == 2) {
+			IC.IncrementOpenCount ();
+		} else if (i == 3) {
+			// unlock scog lotto
+		} else if (i == 4) {
+			// luck or not really
+			// duty of honour expansion
+		} else if (i == 5) {
+			// retro game
+		} else if (i == 6) {
+			// player 1 z ground
+		} else if (i == 7) {
+			// achievement
+		} else if (i == 8) {
+			// second shop
+		} 
 	}
 
 	public int CheckUpgrades(int i){
