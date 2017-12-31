@@ -72,7 +72,7 @@ public class BF_CrateButtonClick : MonoBehaviour {
 		}
 
 		// materialize the Cards on the screen ui
-		int OpenCount = IC.getOpenCount();
+		int OpenCount = IC.getHowManyToOpen();
 		for (int i = 0; i < OpenCount; i++) {
 			// call random
 			int id = RNGcontroller.getRandom();

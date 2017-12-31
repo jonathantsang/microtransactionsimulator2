@@ -93,7 +93,7 @@ public class InventoryController : MonoBehaviour {
 		Currency += amt;
 	}
 
-	public int getOpenCount(){
+	public int getHowManyToOpen(){
 		return OpenCount;
 	}
 

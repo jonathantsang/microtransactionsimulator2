@@ -32,7 +32,7 @@ public class LW_CreateCards : MonoBehaviour {
 	}
 
 	public void MakeCards(){
-		for(int i = 0; i < IC.getOpenCount(); i++){
+		for(int i = 0; i < IC.getHowManyToOpen(); i++){
 			int choose = Random.Range (0, 3);
 			int id;
 			if (choose == 0) {

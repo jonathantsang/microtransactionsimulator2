@@ -150,16 +150,24 @@ Dec 29:
 Dec 30:
 - make art for merging -
 - bf button static limit clicks -
-- directory of recipes unlocked
-- implement merged artwork images
-- player 1 ground ui
+- directory of recipes unlocked -
+- implement merged artwork images -
+- player 1 ground ui -
+
+Dec 31:
+- worlds art finished for p1dg and duty of honour
 - duty of honour ui
 - lootawatch ui
+- bf ui
 - saves
 
 Dec 30:
 - steamworks
 - graphics for page
+
+final day
+Jan 1:
+- 
 
 plan:
 - finish merging

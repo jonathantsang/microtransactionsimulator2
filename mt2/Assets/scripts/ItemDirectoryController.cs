@@ -10,7 +10,8 @@ public class ItemDirectoryController : MonoBehaviour {
 	public Sprite one, two, three, four, five, six, seven, eight, nine, ten;
 	public Sprite eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty;
 	public Sprite twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeigth, twentynine, thirty;
-
+	public Sprite thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive, thirtysix, thirtyseven, thirtyeight, thirtynine, fourty;
+	public Sprite fourtyone, fourtytwo, fourtythree, fourtyfour, fourtyfive, fourtysix, fourtyseven, fourtyeight, fourtynine, fifty;
 	Dictionary<int, Item> directory;
 	List<Sprite> Sprites;
 
@@ -53,11 +54,34 @@ public class ItemDirectoryController : MonoBehaviour {
 			{27, new Item(27, "Fidget Spinner", "Keeping it hip", "common")},
 			{28, new Item(28, "Sun", "Warm circle", "common")},
 			{29, new Item(29, "Moon", "Cheesey", "common")},
-			{30, new Item(30, "Earth", "Home", "common")}
+			{30, new Item(30, "Earth", "Home", "common")},
+			{31, new Item(31, "VR Helmet", "The future is near", "common")},
+			{32, new Item(32, "Crab", "Fruits of the sea", "common")},
+			{33, new Item(33, "Crowbar", "Opening crates", "common")},
+			{34, new Item(34, "Gorilla", "King of the Kongs", "common")},
+			{35, new Item(35, "Sniper", "BOOM", "common")},
+			{36, new Item(36, "RNG", "Luck based", "common")},
+			{37, new Item(37, "Spy", "Secret intel", "common")},
+			{38, new Item(38, "Magnifying Glass", "Closer", "common")},
+			{39, new Item(39, "Shark Tank", "10% stake", "common")},
+			{40, new Item(40, "Famous Painting", "Art", "common")},
+			{41, new Item(41, "Violin", "Musical", "common")},
+			{42, new Item(42, "Contemporary Art", "Exquisite taste", "common")},
+			{43, new Item(43, "Baseball Bat", "Home run", "common")},
+			{44, new Item(44, "Pencil", "Doodle bob", "common")},
+			{45, new Item(45, "Cake", "Let them eat", "common")},
+			{46, new Item(46, "Corrupted Data", "o1aD2IW68", "common")},
+			{47, new Item(47, "Clock", "It's 1:04AM", "common")},
+			{48, new Item(48, "Ghost", "Spooky", "common")},
+			{49, new Item(49, "Chocolate", "Tasty", "common")},
+			{50, new Item(50, "Snow", "It's cold", "common")},
 		};
 		// Indexing starts at 1, so put one twice
 		Sprites = new List<Sprite> () {one, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
-			twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeigth, twentynine, thirty};
+			twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeigth, twentynine, thirty,
+			thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive, thirtysix, thirtyseven, thirtyeight, thirtynine, fourty,
+			fourtyone, fourtytwo, fourtythree, fourtyfour, fourtyfive, fourtysix, fourtyseven, fourtyeight, fourtynine, fifty
+		};
 	}
 
 	public Item getItem(int i){
