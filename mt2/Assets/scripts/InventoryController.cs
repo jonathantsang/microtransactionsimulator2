@@ -11,6 +11,10 @@ public class InventoryController : MonoBehaviour {
 	private List<int> Inventory;
 	private Dictionary<int, int> Collected; // Used for inventory page that lets you know what you have seen
 	private Dictionary<int, int> RecipesUnlocked; // Recipes unlocked
+	private List<int> Stats; // Keeps track of boolean things:
+	// 0 
+	// 1
+	// 2 RetroCompleted
 
 	// data for storage
 	private int NumberOpened = 0; // How many crates opened
@@ -27,6 +31,7 @@ public class InventoryController : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		// TODO TESTING
+		Stats = new List<int>() {0, 0, 0};
 		RecipesUnlocked = new Dictionary<int, int>();
 		Inventory = new List<int> () {2, 3, 6, 8, 9, 10, 16};
 		Collected = new Dictionary<int, int> () {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}};
@@ -66,6 +71,17 @@ public class InventoryController : MonoBehaviour {
 			return false;
 		} else {
 			return true;
+		}
+	}
+
+	public bool CheckRecipe(int i){
+		if (RecipesUnlocked.ContainsKey (i)) {
+			if (RecipesUnlocked [i] >= 1) {
+				return true;
+			}
+			return false;
+		} else {
+			return false;
 		}
 	}
 
@@ -109,5 +125,9 @@ public class InventoryController : MonoBehaviour {
 	// USED FOR SHOP UPGRADES
 	public void IncrementOpenCount(){
 		OpenCount++;
+	}
+
+	public void CompleteRetro(){
+		Stats [2]++; // Done
 	}
 }

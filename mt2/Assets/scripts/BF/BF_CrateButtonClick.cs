@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class BF_CrateButtonClick : MonoBehaviour {
 
+	// Three listeners for the button
+	static float wait1 = 5; // Wait 10 seconds before clicking again
+	static float wait2 = 5;
+	static float wait3 = 5;
+
 	private BF_CameraMovement camera;
 	private BF_RNGController RNGcontroller;
 	private InventoryController IC;
@@ -30,16 +35,28 @@ public class BF_CrateButtonClick : MonoBehaviour {
 		// Button
 		Button btn = GetComponent<Button>();
 		btn.onClick.AddListener (OpenAnimation);
-		btn.onClick.AddListener (CreateCrates);
+		btn.onClick.AddListener (CreateCards);
 		btn.onClick.AddListener (MoveCamera);
 	}
 
 	void MoveCamera(){
+		if (wait3 < 5) {
+			return;
+		} else {
+			wait3 = 0;
+		}
+
 		// sets the state after the camera has moved
 		StartCoroutine (camera.OpenCrateMovement ());
 	}
 
 	void OpenAnimation(){
+		if (wait2 < 5) {
+			return;
+		} else {
+			wait2 = 0;
+		}
+
 		// open panels
 		GameObject[] panels = GameObject.FindGameObjectsWithTag("panel");
 		for (int i = 0; i < panels.Length; i++) {
@@ -47,8 +64,14 @@ public class BF_CrateButtonClick : MonoBehaviour {
 		}
 	}
 
-	void CreateCrates(){
-		// materialize the crates on the screen ui
+	void CreateCards(){
+		if (wait1 < 5) {
+			return;
+		} else {
+			wait1 = 0;
+		}
+
+		// materialize the Cards on the screen ui
 		int OpenCount = IC.getOpenCount();
 		for (int i = 0; i < OpenCount; i++) {
 			// call random
@@ -80,6 +103,12 @@ public class BF_CrateButtonClick : MonoBehaviour {
 			// parent is Cards holder
 			CardCreated.transform.parent = CardHolder.transform;
 		} 
+	}
+
+	void Update(){
+		wait1 += Time.deltaTime;
+		wait2 += Time.deltaTime;
+		wait3 += Time.deltaTime;
 	}
 
 }

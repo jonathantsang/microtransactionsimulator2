@@ -18,17 +18,21 @@ public class ShopUnlocked : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 		Debug.Log ("shop start");
-		shopUnlockedList = new List<int> ();
+		shopUnlockedList = new List<int> () { 0,0,0,0,0,0,0,0,0,0};
+		// Shop Upgrades
+		// 0-2 Opens 1 more crate
+		// 3 unlocks casino scog lotto
+		// 4 luck tweaked
+		// 5 retro game
+		// 6 unlocks player 1 z ground
+		// 7 achievement (cali or bust)
+		// 8 secondary shop
 
 		int numUpgrades = 9; // TODO increase
-		for (int i = 0; i < numUpgrades; i++) {
-			shopUnlockedList.Add (0);
-		}
 	}
 
 	public void Unlock(int i){
 		shopUnlockedList [i] = 1;
-
 		// Based on the index, it does different upgrades
 		if (i == 0) {
 			IC.IncrementOpenCount ();
@@ -38,10 +42,12 @@ public class ShopUnlocked : MonoBehaviour {
 			IC.IncrementOpenCount ();
 		} else if (i == 3) {
 			// unlock scog lotto
+			// should show up in the worlds
 		} else if (i == 4) {
 			// luck or not really
 		} else if (i == 5) {
 			// retro game
+			// should show up in the worlds
 		} else if (i == 6) {
 			// player 1 z ground
 		} else if (i == 7) {

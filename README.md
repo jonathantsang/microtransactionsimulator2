@@ -80,13 +80,13 @@ shop:
 - california love 8
 - endgame 9
 	// Shop Upgrades
-	// 1-3 Opens 1 more crate
-	// 4 unlocks casino scog lotto
-	// 5 luck tweaked
-	// 6 retro game
-	// 7 unlocks player 1 z ground
-	// 8 achievement (cali or bust)
-	// 9 secondary shop
+	// 0-2 Opens 1 more crate
+	// 3 unlocks casino scog lotto
+	// 4 luck tweaked
+	// 5 retro game
+	// 6 unlocks player 1 z ground
+	// 7 achievement (cali or bust)
+	// 8 secondary shop
 
 bugs:
 - crate button pressed multiple times goes too fast
@@ -145,14 +145,16 @@ Dec 28:
 Dec 29:
 - worlds page implemented (up to lootawatch) - 
 - planned shop upgrades - 
+- upgrades do stuff -
 
-- upgrades do stuff
-- make art for merging
-
+Dec 30:
+- make art for merging -
+- bf button static limit clicks -
+- directory of recipes unlocked
+- implement merged artwork images
 - player 1 ground ui
 - duty of honour ui
 - lootawatch ui
-
 - saves
 
 Dec 30:

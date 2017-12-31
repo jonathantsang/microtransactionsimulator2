@@ -1,9 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LabController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/ShopUnlocked.cs">
     <Files>
-      <File FileName="Assets/LabController.cs" Line="14" Column="3" />
-      <File FileName="Assets/LabPageSelectedController.cs" Line="4" Column="1" />
+      <File FileName="Assets/scripts/ShopUnlocked.cs" Line="21" Column="48" />
+      <File FileName="Assets/scripts/InventoryController.cs" Line="120" Column="15" />
+      <File FileName="Assets/scripts/ItemDirectoryController.cs" Line="6" Column="1" />
+      <File FileName="Assets/RecipeDirectoryController.cs" Line="27" Column="42" />
+      <File FileName="Assets/scripts/ShopCurrency.cs" Line="17" Column="43" />
+      <File FileName="Assets/scripts/Lab/LabController.cs" Line="59" Column="4" />
+      <File FileName="Assets/scripts/Lab/LabPageClick.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Lab/LabPageItemSlotClick.cs" Line="41" Column="15" />
+      <File FileName="Assets/scripts/Lab/LabPageSelectedController.cs" Line="66" Column="2" />
+      <File FileName="Assets/CasinoGambleButton.cs" Line="52" Column="23" />
+      <File FileName="Assets/CasinoController.cs" Line="20" Column="1" />
+      <File FileName="Assets/GambleController.cs" Line="1" Column="1" />
+      <File FileName="Assets/PlayerMovement.cs" Line="25" Column="26" />
+      <File FileName="Assets/PelletController.cs" Line="33" Column="13" />
+      <File FileName="Assets/CasinoButton.cs" Line="16" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

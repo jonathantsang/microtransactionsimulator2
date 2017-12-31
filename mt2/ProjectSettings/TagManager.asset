@@ -27,6 +27,9 @@ TagManager:
   - SelectedController
   - LabController
   - RecipeDirectoryController
+  - Pellet
+  - InvisibleWall
+  - PelletController
   layers:
   - Default
   - TransparentFX
@@ -61,6 +64,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 114663751
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 2900776341
     locked: 0
