@@ -35,3 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/Retro.unity
     guid: 3d173998b241f4a4b9412d6a0a603eb2
+  - enabled: 1
+    path: Assets/scenes/P1DG.unity
+    guid: 662875357051f4dd781daff15ad84cf4
+  - enabled: 1
+    path: Assets/scenes/DOH.unity
+    guid: fcaf27ad358b94d92bc50c40bdc31e4f
+  - enabled: 1
+    path: Assets/scenes/LW.unity
+    guid: 061d6f29675924a15858208425331e58

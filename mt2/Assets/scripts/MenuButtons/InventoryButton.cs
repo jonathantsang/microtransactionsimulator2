@@ -11,7 +11,7 @@ public class InventoryButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		btn = GetComponent<Button> ();
-		btn.onClick.AddListener (openInventory);
+		btn.onClick.AddListener (OpenInventory);
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class InventoryButton : MonoBehaviour {
 		
 	}
 
-	void openInventory(){
+	void OpenInventory(){
 		SceneManager.LoadScene ("Inventory");
 	}
 }

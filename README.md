@@ -155,19 +155,32 @@ Dec 30:
 - player 1 ground ui -
 
 Dec 31:
+- slow down p1dg button static - 
+
 - worlds art finished for p1dg and duty of honour
 - duty of honour ui
 - lootawatch ui
 - bf ui
 - saves
 
-Dec 30:
+Dec 31:
 - steamworks
 - graphics for page
 
 final day
 Jan 1:
-- 
+- cleanup
+
+j3:
+- finish duty of honour, drop crate, something cards
+- finish lootawatch
+- worlds art for doh and p1dg
+- start the saves
+
+j4:
+- finish saves
+- implement steamworks
+- pay fee
 
 plan:
 - finish merging

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Lab.unity
+- path: Assets/scenes/LW.unity
   isLoaded: 1
   isActive: 1

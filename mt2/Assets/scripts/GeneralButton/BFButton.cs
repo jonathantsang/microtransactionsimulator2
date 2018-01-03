@@ -11,7 +11,7 @@ public class BFButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		btn = GetComponent<Button> ();
-		btn.onClick.AddListener (openInventory);
+		btn.onClick.AddListener (OpenBF);
 	}
 
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class BFButton : MonoBehaviour {
 
 	}
 
-	void openInventory(){
+	void OpenBF(){
 		SceneManager.LoadScene ("BF");
 	}
 }
