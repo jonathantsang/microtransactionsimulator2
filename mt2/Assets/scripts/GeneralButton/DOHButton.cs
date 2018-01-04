@@ -12,6 +12,12 @@ public class DOHButton : MonoBehaviour {
 	void Start () {
 		btn = GetComponent<Button> ();
 		btn.onClick.AddListener (OpenDOH);
+		// Disable if not unlocked from shop
+		ShopUnlocked SU = GameObject.FindGameObjectWithTag("ShopUnlocked").GetComponent<ShopUnlocked>();
+		// Casino upgrade is 3
+		if(SU.CheckUpgrades(7) < 1){
+			Destroy (transform.parent.gameObject);
+		}
 	}
 
 	// Update is called once per frame

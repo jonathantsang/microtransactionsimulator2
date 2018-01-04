@@ -19,6 +19,10 @@ public class ShopUnlocked : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 		Debug.Log ("shop start");
 		shopUnlockedList = new List<int> () { 0,0,0,0,0,0,0,0,0,0};
+
+		// Linking
+		IC = GameObject.FindGameObjectWithTag("InventoryController").GetComponent<InventoryController>();
+
 		// Shop Upgrades
 		// 0-2 Opens 1 more crate
 		// 3 unlocks casino scog lotto

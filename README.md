@@ -82,7 +82,7 @@ shop:
 	// Shop Upgrades
 	// 0-2 Opens 1 more crate
 	// 3 unlocks casino scog lotto
-	// 4 luck tweaked
+	// 4 luck tweaked, duty of honour
 	// 5 retro game
 	// 6 unlocks player 1 z ground
 	// 7 achievement (cali or bust)
@@ -176,6 +176,7 @@ j3:
 - finish lootawatch
 - worlds art for doh and p1dg
 - start the saves
+- how to promote merging
 
 j4:
 - finish saves

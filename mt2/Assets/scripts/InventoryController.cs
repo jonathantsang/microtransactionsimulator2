@@ -18,7 +18,7 @@ public class InventoryController : MonoBehaviour {
 
 	// data for storage
 	private int NumberOpened = 0; // How many crates opened
-	private int Currency = 10; // How much currency they have
+	private int Currency = 10000; // How much currency they have
 	private int OpenCount = 3; // How many to open at once
 
 	// Use this for initialization

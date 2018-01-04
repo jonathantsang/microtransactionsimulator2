@@ -12,6 +12,12 @@ public class P1DGButton : MonoBehaviour {
 	void Start () {
 		btn = GetComponent<Button> ();
 		btn.onClick.AddListener (OpenP1DG);
+		// Disable if not unlocked from shop
+		ShopUnlocked SU = GameObject.FindGameObjectWithTag("ShopUnlocked").GetComponent<ShopUnlocked>();
+		// Casino upgrade is 3
+		if(SU.CheckUpgrades(6) < 1){
+			Destroy (transform.parent.gameObject);
+		}
 	}
 
 	// Update is called once per frame
