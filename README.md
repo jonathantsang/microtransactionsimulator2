@@ -175,13 +175,15 @@ j3:
 - finish duty of honour, drop crate, something cards
 - finish lootawatch
 - worlds art for doh and p1dg
-- start the saves
-- how to promote merging
+
 
 j4:
+- start the saves
+- how to promote merging
 - finish saves
 - implement steamworks
 - pay fee
+- figure out usa bank account
 
 plan:
 - finish merging

@@ -9,12 +9,14 @@ public class LW_OpenButton : MonoBehaviour {
 	private GameObject DiscPlaces;
 
 	private LW_OpenAnimation OA;
+	private InventoryController IC;
 	//private LW_SpinningCard SC;
 	private LW_StateController StC;
 	private LW_CreateCards CC;
 
 	// Use this for initialization
 	void Start () {
+		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
 		StC = GameObject.FindGameObjectWithTag ("StateController").GetComponent<LW_StateController> ();
 		OA = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<LW_OpenAnimation> ();
 		//SC = GameObject.FindGameObjectWithTag ("SpinningCard").GetComponent<LW_SpinningCard> ();
@@ -34,7 +36,8 @@ public class LW_OpenButton : MonoBehaviour {
 		// Change State
 		StC.changeState(1);
 		// create some bad discs
-		for(int i = 0; i < 3; i++){
+		int amount = IC.getHowManyToOpen();
+		for(int i = 0; i < amount; i++){
 			GameObject disc = Instantiate (Disc, DiscPlaces.transform.GetChild(i).position, Quaternion.identity);
 			disc.GetComponent<LW_SpinningCard> ().MoveDisc ();
 			Destroy (disc, 4);
@@ -43,5 +46,7 @@ public class LW_OpenButton : MonoBehaviour {
 		OA.MoveCameraForwards();
 		// Make the items
 		CC.MakeCards();
+
+		// IC incremented in MakeCards
 	}
 }

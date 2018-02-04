@@ -33,6 +33,8 @@ public class LW_CreateCards : MonoBehaviour {
 
 	public void MakeCards(){
 		for(int i = 0; i < IC.getHowManyToOpen(); i++){
+
+			// Random is for the different colour bottoms
 			int choose = Random.Range (0, 3);
 			int id;
 			if (choose == 0) {
@@ -100,5 +102,8 @@ public class LW_CreateCards : MonoBehaviour {
 				IC.AddToInventory (id);
 			}
 		}
+
+		// Increment IC
+		IC.IncrementNumberOpened();
 	}
 }

@@ -58,5 +58,8 @@ public class P1DGCrateButton : MonoBehaviour {
 
 			newcard.transform.SetParent (CardHolder.transform);
 		}
+
+		// Increment IC
+		IC.IncrementNumberOpened();
 	}
 }

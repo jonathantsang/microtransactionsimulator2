@@ -18,8 +18,8 @@ public class InventoryController : MonoBehaviour {
 
 	// data for storage
 	private int NumberOpened = 0; // How many crates opened
-	private int Currency = 10000; // How much currency they have
-	private int OpenCount = 3; // How many to open at once
+	private int Currency = 10; // How much currency they have
+	private int OpenCount = 1; // How many to open at once
 
 	// Use this for initialization
 	void Start () {
@@ -33,9 +33,16 @@ public class InventoryController : MonoBehaviour {
 		// TODO TESTING
 		Stats = new List<int>() {0, 0, 0};
 		RecipesUnlocked = new Dictionary<int, int>();
-		Inventory = new List<int> () {2, 3, 6, 8, 9, 10, 16};
-		Collected = new Dictionary<int, int> () {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}};
+		Inventory = new List<int> ();
+		Collected = new Dictionary<int, int> ();
+		// {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}}
+	}
 
+	public void LoadInventory(int currency){
+		Currency = currency;
+		// Update text
+		ShopCurrency SC = GameObject.FindGameObjectWithTag("Currency").GetComponent<ShopCurrency>();
+		SC.UpdateText ();
 	}
 	
 	// Update is called once per frame
@@ -122,8 +129,12 @@ public class InventoryController : MonoBehaviour {
 		return NumberOpened;
 	}
 
+	public void IncrementNumberOpened(){
+		NumberOpened++;
+	}
+
 	// USED FOR SHOP UPGRADES
-	public void IncrementOpenCount(){
+	public void IncrementHowManyToOpenCount(){
 		OpenCount++;
 	}
 

@@ -18,7 +18,7 @@ public class ShopUnlocked : MonoBehaviour {
 			Destroy(gameObject);    
 		DontDestroyOnLoad(gameObject);
 		Debug.Log ("shop start");
-		shopUnlockedList = new List<int> () { 0,0,0,0,0,0,0,0,0,0};
+		shopUnlockedList = new List<int> () {0,0,0,0,0,0,0,0,0,0};
 
 		// Linking
 		IC = GameObject.FindGameObjectWithTag("InventoryController").GetComponent<InventoryController>();
@@ -39,11 +39,11 @@ public class ShopUnlocked : MonoBehaviour {
 		shopUnlockedList [i] = 1;
 		// Based on the index, it does different upgrades
 		if (i == 0) {
-			IC.IncrementOpenCount ();
+			IC.IncrementHowManyToOpenCount ();
 		} else if (i == 1) {
-			IC.IncrementOpenCount ();
+			IC.IncrementHowManyToOpenCount ();
 		} else if (i == 2) {
-			IC.IncrementOpenCount ();
+			IC.IncrementHowManyToOpenCount ();
 		} else if (i == 3) {
 			// unlock scog lotto
 			// should show up in the worlds

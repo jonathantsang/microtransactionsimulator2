@@ -65,7 +65,7 @@ public class BF_CrateButtonClick : MonoBehaviour {
 	}
 
 	void CreateCards(){
-		if (wait1 < 5) {
+		if (wait1 < 5 || CardHolder.transform.childCount != 0) {
 			return;
 		} else {
 			wait1 = 0;
