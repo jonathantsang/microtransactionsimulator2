@@ -41,7 +41,7 @@ public class InventoryPageController : MonoBehaviour {
 				ItemTiles.Add (Inventory.transform.GetChild (i).transform.GetChild (j).gameObject);
 
 				// Only edit thumbnail if it has been collected
-				if (Collected.ContainsKey(id) && Collected[id] >= 1) {
+				if (Collected.ContainsKey(id) && Collected[id] >= 0) {
 					// change icon
 					Image icon = Inventory.transform.GetChild (i).transform.GetChild (j).GetComponent<Image>();
 					icon.sprite = IDC.getSprite(id);

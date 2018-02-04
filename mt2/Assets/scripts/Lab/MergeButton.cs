@@ -72,6 +72,16 @@ public class MergeButton : MonoBehaviour {
 			}
 		} else {
 			// invalid recipe
+			// valid recipe, create popup textbox of recipe
+			GameObject obj = Instantiate(Popup, new Vector3(), Quaternion.identity);
+			// Description
+			// Title
+			obj.transform.GetChild (0).GetComponent<TextMesh> ().text = "ERROR";
+			// Description
+			obj.transform.GetChild (2).GetComponent<TextMesh> ().text = "Failed recipe";
+			//
+			obj.transform.GetChild (3).GetComponent<TextMesh> ().text = "RIP";
+
 			Debug.Log("invalid recipe");
 		}
 

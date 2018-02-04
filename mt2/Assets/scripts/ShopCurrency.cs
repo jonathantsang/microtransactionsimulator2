@@ -19,7 +19,9 @@ public class ShopCurrency : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (IC) {
+			UpdateText ();
+		}
 	}
 
 	public void UpdateText(){

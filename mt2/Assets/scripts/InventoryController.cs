@@ -21,6 +21,9 @@ public class InventoryController : MonoBehaviour {
 	private int Currency = 10; // How much currency they have
 	private int OpenCount = 1; // How many to open at once
 
+	// Linking
+	private ShopUnlocked SU;
+
 	// Use this for initialization
 	void Start () {
 		// Singleton Behaviour
@@ -31,19 +34,60 @@ public class InventoryController : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		// TODO TESTING
-		Stats = new List<int>() {0, 0, 0};
-		RecipesUnlocked = new Dictionary<int, int>();
 		Inventory = new List<int> ();
 		Collected = new Dictionary<int, int> ();
-		// {{2, 3}, {4, 1}, {6, 2}, {9, 0}, {10, 1}, {11, 2}, {18, 2}}
+		// { { 2, 3 }, { 4, 1 }, { 6, 2 }, { 9, 0 }, { 10, 1 }, { 11, 2 }, { 18, 2 } };
+		RecipesUnlocked = new Dictionary<int, int> ();
+		// {{1, 1}, {4, 0}};
+		Stats = new List<int>() {0, 0, 0};
+		SU = GameObject.FindGameObjectWithTag ("ShopUnlocked").GetComponent<ShopUnlocked> ();
 	}
 
-	public void LoadInventory(int currency){
+	public void LoadInventory(int[] collected, int[] recipesunlocked, int[] stats, int[] shopunlocked, int currency){
+		// Load collected
+		for(int i = 0; i < collected.Length; i++){
+			if (collected [i] != -1) {
+				Collected [i] = collected [i];
+			}
+		}
+
+		// Load recipesunlocked
+		for(int i = 0; i < recipesunlocked.Length; i++){
+			if (recipesunlocked [i] != -1) {
+				RecipesUnlocked [i] = recipesunlocked [i];
+			}
+		}
+
+		// Load stats
+		Stats.Clear();
+		for(int i = 0; i < stats.Length; i++){
+			Stats.Add (stats [i]);
+		}
+
+		List<int> shopunlockedlist = new List<int> ();
+		shopunlockedlist.Capacity = shopunlocked.Length;
+		// Load shopunlocked
+		for(int i = 0; i < shopunlocked.Length; i++){
+			shopunlockedlist.Add (shopunlocked [i]);
+		}
+
+
 		Currency = currency;
-		// Update text
-		ShopCurrency SC = GameObject.FindGameObjectWithTag("Currency").GetComponent<ShopCurrency>();
-		SC.UpdateText ();
 	}
+
+	// Used for getting the storage stuff
+	public Dictionary<int,int> getCollected(){
+		return Collected;
+	}
+
+	public Dictionary<int,int> getRecipesUnlocked(){
+		return Collected;
+	}
+
+	public List<int> getStats(){
+		return Stats;
+	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -102,10 +146,6 @@ public class InventoryController : MonoBehaviour {
 
 	public int getHowManyToOpen(){
 		return OpenCount;
-	}
-
-	public Dictionary<int, int> getCollected(){
-		return Collected;
 	}
 
 	public bool checkCollected(int i){

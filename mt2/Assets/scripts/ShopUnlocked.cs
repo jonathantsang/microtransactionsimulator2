@@ -65,4 +65,13 @@ public class ShopUnlocked : MonoBehaviour {
 	public int CheckUpgrades(int i){
 		return shopUnlockedList [i];
 	}
+
+	public List<int> getShopUnlockedList(){
+		return shopUnlockedList;
+	}
+
+	public void setShopUnlockedList(List<int> shopunlockedlist){
+		shopUnlockedList = shopunlockedlist;
+	}
 }
+	

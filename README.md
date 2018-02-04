@@ -171,6 +171,10 @@ final day
 Jan 1:
 - cleanup
 
+Feb 4:
+- saves
+- fail merge popup
+
 j3:
 - finish duty of honour, drop crate, something cards
 - finish lootawatch
@@ -182,8 +186,6 @@ j4:
 - how to promote merging
 - finish saves
 - implement steamworks
-- pay fee
-- figure out usa bank account
 
 plan:
 - finish merging
