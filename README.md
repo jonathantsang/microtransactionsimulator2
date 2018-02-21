@@ -185,7 +185,10 @@ j4:
 - start the saves
 - how to promote merging
 - finish saves
-- implement steamworks
+
+f20:
+- implement steamworks achievements
+
 
 plan:
 - finish merging

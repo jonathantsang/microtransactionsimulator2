@@ -48,7 +48,7 @@ public class LabController : MonoBehaviour {
 				Image image = Content.transform.GetChild(i).transform.GetChild(j).GetComponent<Image>();
 				// count (1) child is text
 				Text count = Content.transform.GetChild(i).transform.GetChild(j).transform.GetChild(1).GetComponent<Text>();
-				print ("check " + IC.checkCollected (id) + " " + id);
+				// print ("check " + IC.checkCollected (id) + " " + id);
 				if (IC.checkCollected (id)) {
 					// use IDC
 					image.sprite = IDC.getSprite(id);
