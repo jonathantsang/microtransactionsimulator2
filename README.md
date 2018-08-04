@@ -188,7 +188,17 @@ j4:
 
 f20:
 - implement steamworks achievements
+achievements:
+- opened 50 : Some 
+- opened 150 : Ton
+- opened 1500 : Whale
+- open at once 2 : Double
+- open at once 3 : Triple
+- open at once 4 : Quadruple
+- hide already got shop
 
+ach ideas:
+- dead meme
 
 plan:
 - finish merging

@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SteamManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/InventoryController.cs">
     <Files>
       <File FileName="Assets/scripts/InventoryController.cs" Line="22" Column="27" />
-      <File FileName="Assets/scripts/SaveController.cs" Line="36" Column="1" />
-      <File FileName="Assets/SteamAchievements.cs" Line="151" Column="32" />
-      <File FileName="Assets/SteamManager.cs" Line="17" Column="1" />
+      <File FileName="Assets/scripts/SaveController.cs" Line="49" Column="23" />
+      <File FileName="Assets/scripts/Lab/LabController.cs" Line="51" Column="8" />
+      <File FileName="Assets/scripts/Steamworks.NET/SteamManager.cs" Line="101" Column="1" />
+      <File FileName="Assets/scripts/ShopPage/ShopController.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
