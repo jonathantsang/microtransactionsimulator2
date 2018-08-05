@@ -9,7 +9,6 @@ public class InventoryPageController : MonoBehaviour {
 
 	GameObject Inventory;
 	InventoryController IC;
-	ItemDirectoryController IDC;
 	Dictionary<int, int> Collected;
 	List<GameObject> ItemTiles;
 
@@ -17,7 +16,6 @@ public class InventoryPageController : MonoBehaviour {
 	void Start () {
 		Inventory = GameObject.FindGameObjectWithTag ("Content").gameObject;
 		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
-		IDC = GameObject.FindGameObjectWithTag ("ItemDirectoryController").GetComponent<ItemDirectoryController> ();
 		Collected = IC.getCollected();
 		ItemTiles = new List<GameObject> ();
 		LoadInventory ();
@@ -29,23 +27,32 @@ public class InventoryPageController : MonoBehaviour {
 	}
 
 	void LoadInventory(){
+
+		List<Card> cards = IC.getCards ();
+
+
+		Card[] cardArray = cards.ToArray();
+		int idx = 0; // Index of the cards list
+
 		// For each row in the inventory, check if the InventoryController has it unlocked
 		for(int i = 0; i < Inventory.transform.childCount; i++){
 			// 5 elements per row
-			int rowCount = 5;
-			for(int j = 0; j < rowCount; j++){
+			int elementsPerCount = 5;
+			for(int j = 0; j < elementsPerCount; j++){
 				int id = i * 5 + j; // Gets the index based on the positioning
 
-				// Load the ID into the InventoryPageClick
-				Inventory.transform.GetChild(i).transform.GetChild(j).GetComponent<InventoryPageClick>().setID(id);
-				ItemTiles.Add (Inventory.transform.GetChild (i).transform.GetChild (j).gameObject);
+				// Load card from the inventory controller
+				int textIndex = 1;
 
-				// Only edit thumbnail if it has been collected
-				if (Collected.ContainsKey(id) && Collected[id] >= 0) {
-					// change icon
-					Image icon = Inventory.transform.GetChild (i).transform.GetChild (j).GetComponent<Image>();
-					icon.sprite = IDC.getSprite(id);
+				// End
+				if (idx >= cards.Count) {
+					return;
 				}
+
+				Text cardText = Inventory.transform.GetChild (i).GetChild (j).GetChild (textIndex).GetComponent<Text> ();
+
+				cardText.text = (cardArray [idx]).getValue().ToString();
+				idx++;
 			}
 		}
 	}

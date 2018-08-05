@@ -4,22 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class InventoryButton : MonoBehaviour {
+public class Open_Cards_Button : MonoBehaviour {
 
 	private Button btn;
 
 	// Use this for initialization
 	void Start () {
 		btn = GetComponent<Button> ();
-		btn.onClick.AddListener (OpenInventory);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		btn.onClick.AddListener (openOpenCards);
 	}
 
-	void OpenInventory(){
-		SceneManager.LoadScene ("CardInventory");
+	// Update is called once per frame
+	void Update () {
+
+	}
+
+	void openOpenCards(){
+		SceneManager.LoadScene ("OpenCards");
 	}
 }

@@ -6,41 +6,47 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scenes/MainMenu.unity
+    path: Assets/scenes/Old/MainMenu.unity
     guid: 81e464928b9514715a255f0a71b1a28d
   - enabled: 1
-    path: Assets/scenes/BF.unity
+    path: Assets/scenes/Old/BF.unity
     guid: ee4aa68049fad4bbb9ecaa1251622603
   - enabled: 1
-    path: Assets/scenes/Inventory.unity
+    path: Assets/scenes/Old/Inventory.unity
     guid: f025234f9ce7c495ea09a8fa4fe3fe21
   - enabled: 1
-    path: Assets/scenes/Shop.unity
+    path: Assets/scenes/Old/Shop.unity
     guid: 627db37bd6b544252bf35eac839daf13
   - enabled: 1
-    path: Assets/scenes/Worlds.unity
+    path: Assets/scenes/Old/Worlds.unity
     guid: b7d623c2c412d4a75bbaa47f36aec40a
   - enabled: 1
-    path: Assets/scenes/Casino.unity
+    path: Assets/scenes/Old/Casino.unity
     guid: d278b222a1e1f417790b0d0c1049545a
   - enabled: 0
-    path: Assets/scenes/Platformer.unity
+    path: Assets/scenes/Old/Platformer.unity
     guid: 456956111947442b8801d5c3e4d7a29d
   - enabled: 1
-    path: Assets/scenes/Shop2.unity
+    path: Assets/scenes/Old/Shop2.unity
     guid: ada044a96788c4a1f9fcaf951649249e
   - enabled: 1
-    path: Assets/scenes/Lab.unity
+    path: Assets/scenes/Old/Lab.unity
     guid: 737f5fd830b644658b3b34781a14d4af
   - enabled: 1
-    path: Assets/scenes/Retro.unity
+    path: Assets/scenes/Old/Retro.unity
     guid: 3d173998b241f4a4b9412d6a0a603eb2
   - enabled: 1
-    path: Assets/scenes/P1DG.unity
+    path: Assets/scenes/Old/P1DG.unity
     guid: 662875357051f4dd781daff15ad84cf4
   - enabled: 1
-    path: Assets/scenes/DOH.unity
+    path: Assets/scenes/Old/DOH.unity
     guid: fcaf27ad358b94d92bc50c40bdc31e4f
   - enabled: 1
-    path: Assets/scenes/LW.unity
+    path: Assets/scenes/Old/LW.unity
     guid: 061d6f29675924a15858208425331e58
+  - enabled: 1
+    path: Assets/scenes/OpenCards.unity
+    guid: b694cd69bcce1483993e7915e7553114
+  - enabled: 1
+    path: Assets/scenes/CardInventory.unity
+    guid: f3b9787bbe25d42a89bb07f5f974bd67

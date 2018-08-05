@@ -16,6 +16,8 @@ public class InventoryController : MonoBehaviour {
 	// 1
 	// 2 RetroCompleted
 
+	private List<Card> inventoryCards = new List<Card> (); // 100 sized array
+
 	// data for storage
 	private int NumberOpened = 0; // How many crates opened
 	private int Currency = 10; // How much currency they have
@@ -176,6 +178,22 @@ public class InventoryController : MonoBehaviour {
 	public void IncrementNumberOpened(){
 		NumberOpened++;
 	}
+
+	// New base
+	public void addCard(Card card){
+		inventoryCards.Add (card);
+	}
+
+	public List<Card> getCards(){
+		return inventoryCards;
+	}
+
+	public void removeCard(Card card){
+		inventoryCards.Remove (card);
+	}
+
+	//
+
 
 	// USED FOR SHOP UPGRADES
 	public void IncrementHowManyToOpenCount(){

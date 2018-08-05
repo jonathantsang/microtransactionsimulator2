@@ -1,0 +1,37 @@
+Make a game
+
+choices:
+- new
+- augment Microtransaction Simulator 2 into a side game like a brawl mini game
+
+topics:
+- battleground games
+- mobile cheap games
+- microtransactions
+- adventure rpg
+- clicker game
+- disney heroes game
+
+game genre:
+- point and click: grim fandango
+- rpg?
+- casino cheap thing again? <- simplicity
+- like that cheap casino game
+- work on a point and click game later?
+
+sources:
+- can't believe not gambling
+- baten kaitos card game
+
+elemental cards
+big number like 1,3, etc. then corner numbers
+wasd and arrow keys
+
+- progression like warrior way or those candy crush 1-100?
+
+plan:
+- make cards objects
+- then get the mini games working
+
+
+
