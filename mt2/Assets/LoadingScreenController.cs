@@ -19,15 +19,15 @@ public class LoadingScreenController : MonoBehaviour {
 	string[] quotes = { "Becoming a lemonade stand tycoon", "Learning frame data", "Shooting 7/44 from the field", "Blowing a 3-1 lead",
 	"Making a cheap survival game and publishing it", "Installing crypto miner", "Hacking the world", "Making waffles", "Not asking for this", 
 	"Catching a ride", "Being met with a terrible fate", "Changing up war", "Making my choices in the end", "Playing pachinko", "Studying python",
-		"Opening digital currency", "Subverting gambling laws", "Artificially raising buds", "Finding princess in castle",
+	"Opening digital currency", "Subverting gambling laws", "Artificially raising buds", "Finding princess in castle",
 	"Remembering no Russian", "...", "Defending Burger Town", "FUS RO DAH", "Changing war", "Enduring and surviving", "Taking an arrow to the knee",
-		"Darude Sandstorming"
+	"Darude Sandstorming", "Gambling virtual skins", "Not getting interviewed by $A", "California Dreamin'", "Coding in C#"
 	};
 
 	static int loadingBarMaxLength = 1600;
 	static int loadingBarHeight = 40;
 
-	float changeTime = 0.3f;
+	float changeTime = 0.5f;
 	float loadBarTime = 3f;
 
 	int dotCount = 0;
@@ -69,7 +69,7 @@ public class LoadingScreenController : MonoBehaviour {
 
 				int rand = Random.Range (0, quotes.Length);
 
-				bottomText1.text = quotes[rand] + dots;
+				bottomText1.text = quotes [rand];
 			}
 
 			if (current > loadBarTime) {
