@@ -5,15 +5,13 @@ using UnityEngine.UI;
 
 public class CardCreatorController : MonoBehaviour {
 
-	Base_RNGController BRNG;
+	BaseRNGController BRNG;
 	GameObject cardHolder;
 	InventoryController IC;
 
 	// Use this for initialization
 	void Start () {
-		BRNG = GameObject.FindGameObjectWithTag ("RNGController").GetComponent<Base_RNGController> ();
-		cardHolder = GameObject.FindGameObjectWithTag ("CardHolder").gameObject;
-		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
+		publicMethodLink ();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +20,12 @@ public class CardCreatorController : MonoBehaviour {
 	}
 
 	public void createCards(){
+		// Public usage needs to check for linking before
+		publicMethodLink();
+
+		// Delete the old cards (aka just activate the backs again)
+		activateCardBacks();
+
 		// Roll the RNG
 		int n1 = BRNG.rollNumber();
 		int n2 = BRNG.rollNumber();
@@ -34,11 +38,30 @@ public class CardCreatorController : MonoBehaviour {
 		cardHolder.transform.GetChild (2).GetChild (1).GetComponent<Text> ().text = n3.ToString ();
 		cardHolder.transform.GetChild (3).GetChild (1).GetComponent<Text> ().text = n4.ToString ();
 
-		// Save to the Inventory
+		// Save to the Inventory only when clicked... hmmm
 		IC.addCard (new Card (n1));
 		IC.addCard (new Card (n2));
 		IC.addCard (new Card (n3));
 		IC.addCard (new Card (n4));
+	}
 
+	void activateCardBacks(){
+		// Set cardBack on all the cards
+		cardHolder.transform.GetChild (0).GetComponent<CardCollider>().setCardBackState(true);
+		cardHolder.transform.GetChild (1).GetComponent<CardCollider>().setCardBackState(true);
+		cardHolder.transform.GetChild (2).GetComponent<CardCollider>().setCardBackState(true);
+		cardHolder.transform.GetChild (3).GetComponent<CardCollider>().setCardBackState(true);
+
+		// Set flipped on all the cards to false
+		cardHolder.transform.GetChild (0).GetComponent<CardCollider>().setFlipped(false);
+		cardHolder.transform.GetChild (1).GetComponent<CardCollider>().setFlipped(false);
+		cardHolder.transform.GetChild (2).GetComponent<CardCollider>().setFlipped(false);
+		cardHolder.transform.GetChild (3).GetComponent<CardCollider>().setFlipped(false);
+	}
+
+	void publicMethodLink(){
+		BRNG = GameObject.FindGameObjectWithTag ("RNGController").GetComponent<BaseRNGController> ();
+		IC = GameObject.FindGameObjectWithTag ("InventoryController").GetComponent<InventoryController> ();
+		cardHolder = GameObject.FindGameObjectWithTag ("CardHolder").gameObject;
 	}
 }

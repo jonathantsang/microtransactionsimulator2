@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Base_OpenButton : MonoBehaviour {
+public class BaseOpenButton : MonoBehaviour {
 
 	Button btn;
 	CardCreatorController CCC;
+	LoadingScreenController LSC;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,8 @@ public class Base_OpenButton : MonoBehaviour {
 		btn.onClick.AddListener (generateCards);
 
 		CCC = GameObject.FindGameObjectWithTag ("CardCreatorController").GetComponent<CardCreatorController> ();
+		LSC = GameObject.FindGameObjectWithTag ("LoadingScreenController").GetComponent<LoadingScreenController> ();
+		generateCardsFirstTime (); // at the start
 	}
 	
 	// Update is called once per frame
@@ -23,6 +26,11 @@ public class Base_OpenButton : MonoBehaviour {
 
 	void generateCards(){
 		// call the cardcreatorcontroller
+		CCC.createCards();
+		LSC.turnOnLoadingScreen ();
+	}
+
+	void generateCardsFirstTime(){
 		CCC.createCards();
 	}
 }

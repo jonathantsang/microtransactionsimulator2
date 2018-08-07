@@ -15,9 +15,15 @@ public class LoadingScreenController : MonoBehaviour {
 
 	// Consts
 	static string LOADING = "Loading";
-	static string BT1 = "Opening digital currency";
-	static string BT2 = "Subverting gambling laws";
-	static string BT3 = "Artificially raising buds";
+
+	string[] quotes = { "Becoming a lemonade stand tycoon", "Learning frame data", "Shooting 7/44 from the field", "Blowing a 3-1 lead",
+	"Making a cheap survival game and publishing it", "Installing crypto miner", "Hacking the world", "Making waffles", "Not asking for this", 
+	"Catching a ride", "Being met with a terrible fate", "Changing up war", "Making my choices in the end", "Playing pachinko", "Studying python",
+		"Opening digital currency", "Subverting gambling laws", "Artificially raising buds", "Finding princess in castle",
+	"Remembering no Russian", "...", "Defending Burger Town", "FUS RO DAH", "Changing war", "Enduring and surviving", "Taking an arrow to the knee",
+		"Darude Sandstorming"
+	};
+
 	static int loadingBarMaxLength = 1600;
 	static int loadingBarHeight = 40;
 
@@ -37,15 +43,13 @@ public class LoadingScreenController : MonoBehaviour {
 
 		// Prep bottom text
 		bottomText1 = loadingScreen.transform.GetChild (2).GetChild (0).GetComponent<Text> ();
-		bottomText2 = loadingScreen.transform.GetChild (2).GetChild (1).GetComponent<Text> ();
-		bottomText3 = loadingScreen.transform.GetChild (2).GetChild (2).GetComponent<Text> ();
 
 		// Loading bar on the bottom
 		loadingBar = loadingScreen.transform.GetChild (3).GetChild (0).gameObject;
 
 		// Turn off the start
 		// DEMO
-		// loadingScreen.SetActive (false);
+		loadingScreen.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -62,10 +66,10 @@ public class LoadingScreenController : MonoBehaviour {
 				string dots = new string('.', dotCount);
 
 				loadingText.text = LOADING + dots;
-				bottomText1.text = BT1 + dots;
-				bottomText2.text = BT2 + dots;
-				bottomText3.text = BT3 + dots;
 
+				int rand = Random.Range (0, quotes.Length);
+
+				bottomText1.text = quotes[rand] + dots;
 			}
 
 			if (current > loadBarTime) {
@@ -80,19 +84,31 @@ public class LoadingScreenController : MonoBehaviour {
 	}
 
 	public void turnOnLoadingScreen(){
+		// public method link
+		publicMethodLink();
+
+		// Roll for random quote
+
 		loadingScreen.SetActive (true);
-
-		// ... for Loading (index 1)
-
-
-		// ... for the bottomText words (index 2, index i++)
-
-		// Loading bar loads slowly for 3 second
 	}
 
 	public void turnOffLoadingScreen(){
 		current = 0;
 		dotTime = 0;
 		loadingScreen.SetActive(false);
+	}
+
+	void publicMethodLink(){
+		if (loadingScreen == null) {
+			loadingScreen = GameObject.FindGameObjectWithTag ("LoadingScreen").gameObject;
+		}
+
+		loadingText = loadingScreen.transform.GetChild (1).GetComponent<Text> ();
+
+		// Prep bottom text
+		bottomText1 = loadingScreen.transform.GetChild (2).GetChild (0).GetComponent<Text> ();
+
+		// Loading bar on the bottom
+		loadingBar = loadingScreen.transform.GetChild (3).GetChild (0).gameObject;
 	}
 }

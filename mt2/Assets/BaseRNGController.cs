@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Base_RNGController : MonoBehaviour {
+public class BaseRNGController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -24,9 +24,9 @@ public class Base_RNGController : MonoBehaviour {
 		int cardValue = 11;
 
 		// Pick a number from 1 to 100
-		if (value <= 500) {
+		if (value <= 700) {
 			cardValue = Random.Range (0, 30);
-		} else if (value <= 700) {
+		} else if (value <= 750) {
 			cardValue = Random.Range (30, 50);
 		} else if (value <= 800) {
 			cardValue = Random.Range (50, 65);

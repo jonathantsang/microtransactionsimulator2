@@ -33,6 +33,7 @@ TagManager:
   - Cards
   - CardCreatorController
   - LoadingScreen
+  - LoadingScreenController
   layers:
   - Default
   - TransparentFX

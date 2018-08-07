@@ -51,12 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Base_InventoryController.cs" />
-     <Compile Include="Assets\Base_OpenButton.cs" />
-     <Compile Include="Assets\Base_RNGController.cs" />
+     <Compile Include="Assets\BaseOpenButton.cs" />
+     <Compile Include="Assets\BaseRNGController.cs" />
+     <Compile Include="Assets\CardCollider.cs" />
      <Compile Include="Assets\CardCreatorController.cs" />
      <Compile Include="Assets\LoadingScreenController.cs" />
-     <Compile Include="Assets\Open_Cards_Button.cs" />
+     <Compile Include="Assets\OpenCardsSceneButton.cs" />
      <Compile Include="Assets\scripts\Classes\Card.cs" />
      <Compile Include="Assets\scripts\Old\BF\BF_backButton.cs" />
      <Compile Include="Assets\scripts\Old\BF\BF_CameraMovement.cs" />

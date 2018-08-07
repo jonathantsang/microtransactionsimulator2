@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Open_Cards_Button : MonoBehaviour {
+public class OpenCardsSceneButton : MonoBehaviour {
 
 	private Button btn;
 
