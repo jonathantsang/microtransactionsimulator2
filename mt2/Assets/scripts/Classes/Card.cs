@@ -5,11 +5,13 @@ using UnityEngine;
 public class Card {
 
 	int value;
+	int colourIndex;
 	Colour colour;
 
-	public Card(int val){
+	public Card(int val, int cIndex){
 		value = val;
 		// SET colour by enum later
+		colourIndex = cIndex;
 	}
 
 	public int getValue(){
@@ -27,9 +29,25 @@ public class Card {
 	public void setColour(Colour colour){
 		this.colour = colour;
 	}
+
+	public int getColourIndex(){
+		return colourIndex;
+	}
+
+	public void setColourIndex(int index){
+		colourIndex = index;
+	}
 }
 
-public	enum Colour {
-	White,
-	Blue
+public enum Colour {
+	Grey,
+	Brown,
+	Blue,
+	Green,
+	Red,
+	Orange,
+	Yellow,
+	Pink,
+	Purple,
+	Glitch
 }

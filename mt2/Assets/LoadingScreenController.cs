@@ -21,7 +21,10 @@ public class LoadingScreenController : MonoBehaviour {
 	"Catching a ride", "Being met with a terrible fate", "Changing up war", "Making my choices in the end", "Playing pachinko", "Studying python",
 	"Opening digital currency", "Subverting gambling laws", "Artificially raising buds", "Finding princess in castle",
 	"Remembering no Russian", "...", "Defending Burger Town", "FUS RO DAH", "Changing war", "Enduring and surviving", "Taking an arrow to the knee",
-	"Darude Sandstorming", "Gambling virtual skins", "Not getting interviewed by $A", "California Dreamin'", "Coding in C#"
+	"Darude Sandstorming", "Gambling virtual skins", "Not getting interviewed by $A", "California Dreamin'", "Coding in C#",
+	"Waiting for Half Life 3", "Reading a book", "Playing Fallout", "Playing Borderlands", "Buying DLC", "Buying Season Pass", "Watching E3",
+	"Playing Melee", "Loading", "Papapishu", "I'm rubber and you are glue", "E is for Everyone", "RIP Emuparadise", "Indie Dreamz",
+	"98 Overall", "6ix", "I didn't ask for this", "2 number 9s a number 9 large..."
 	};
 
 	static int loadingBarMaxLength = 1600;

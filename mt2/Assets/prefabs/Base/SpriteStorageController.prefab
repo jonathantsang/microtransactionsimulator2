@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1802250864862584}
+  m_IsPrefabParent: 1
+--- !u!1 &1802250864862584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4419505297869260}
+  - component: {fileID: 114465812528377482}
+  m_Layer: 0
+  m_Name: SpriteStorageController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4419505297869260
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802250864862584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114465812528377482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802250864862584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc286289b38d43929d37fd9cefafd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card1: {fileID: 21300000, guid: 6bb604edc34d6411e88fcbdc80fb9bce, type: 3}
+  card2: {fileID: 21300000, guid: af5dd98c384c7474ea60f578a2bd8a54, type: 3}
+  card3: {fileID: 21300000, guid: 2755ed78e2f47418d8d92b3733bb17a3, type: 3}
+  card4: {fileID: 21300000, guid: 8379da156ba2049d98f5d8737b504d03, type: 3}
+  card5: {fileID: 21300000, guid: 08ab2d91b57fb43f1a33f587751779b3, type: 3}
+  card6: {fileID: 21300000, guid: 412f1c5ed7a8a43c6baa3823c1d310c8, type: 3}
+  card7: {fileID: 21300000, guid: 2147a88f7f1d5401c87722c424b0bb5a, type: 3}
+  card8: {fileID: 21300000, guid: 0dfd4cda03afa4b0ab6264f466109b6e, type: 3}
+  card9: {fileID: 21300000, guid: cf792504bfd5d497cb110b48ab53fe3b, type: 3}
+  card10: {fileID: 21300000, guid: 64f548644dddf40008f78a7e14675997, type: 3}

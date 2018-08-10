@@ -50,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/CardInventory.unity
     guid: f3b9787bbe25d42a89bb07f5f974bd67
+  - enabled: 1
+    path: Assets/scenes/CardShop.unity
+    guid: c7a37c6ac1bd14c638578dac2f61f7a9

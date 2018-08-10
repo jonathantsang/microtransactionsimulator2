@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class CardCollider : MonoBehaviour {
 
+	int value;
+	int colourIndex;
+
 	bool flipped;
 	GameObject cardBack;
 
@@ -35,11 +38,8 @@ public class CardCollider : MonoBehaviour {
 		if (!flipped) {
 			disableCardBack ();
 			// Add to the inventory
-
-			int num = int.Parse(transform.GetChild (1).GetComponent<Text> ().text);
-
-			IC.addCard(new Card(num));
-			print ("added " + num);
+			IC.addCard(new Card(value, colourIndex));
+			print ("added " + value + " and colour index " + colourIndex);
 		}
 
 	}
@@ -59,5 +59,10 @@ public class CardCollider : MonoBehaviour {
 
 	void setCardBack(){
 		cardBack = transform.GetChild (2).gameObject;
+	}
+
+	public void setValueAndColourIndex(int value, int colourIndex){
+		this.value = value;
+		this.colourIndex = colourIndex;
 	}
 }
